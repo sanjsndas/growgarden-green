@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Grow Garden Green</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E7D32; /* Forest Green */
+            --accent-color: #A5D6A7;   /* Soft Moss */
+            --highlight-color: #FFEB3B; /* Sunshine Yellow */
+            --text-color: #333;
+            --light-grey: #f4f4f4;
+            --dark-grey: #666;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 2.8em; }
+        h2 { font-size: 2.2em; }
+        h3 { font-size: 1.8em; }
+        h4 { font-size: 1.4em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 40px; /* Increased horizontal padding */
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* --- Main Content Area --- */
+        .privacy-content {
+            padding: 60px 0;
+            text-align: left;
+        }
+
+        .privacy-content h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .privacy-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .privacy-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--dark-grey);
+        }
+
+        .privacy-content p {
+            margin-bottom: 1em;
+            font-size: 1em;
+            color: var(--text-color);
+        }
+
+        .privacy-content ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1em;
+        }
+
+        .privacy-content ol {
+            list-style: decimal;
+            margin-left: 25px;
+            margin-bottom: 1em;
+        }
+
+        .privacy-content li {
+            margin-bottom: 0.5em;
+        }
+
+        .privacy-content strong {
+            color: var(--primary-color);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        footer .footer-section h3 {
+            color: var(--highlight-color);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        footer .footer-section p,
+        footer .footer-section ul {
+            color: #ccc;
+            font-size: 0.95em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        footer .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-section ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.8em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: var(--highlight-color);
+        }
+
+        footer .copyright {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .container {
+                padding: 20px; /* Revert to original padding on smaller screens for better content fit */
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Grow Garden Green 🌿</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="privacy-content container">
+        <h1>Privacy Policy for Grow Garden Green</h1>
+        <p><strong>Last Updated: July 8, 2025</strong></p>
+
+        <p>At Grow Garden Green, we are deeply committed to protecting the privacy and security of your personal information. This Privacy Policy outlines the types of information we collect, how we use it, with whom we share it, and the choices you have regarding our use of that information. We understand that your privacy is paramount, and we strive to be transparent in our data practices. This policy applies to information collected through our website, growgardengreen.com, and any related services, communications, or interactions you have with us. By using our website or engaging with our services, you signify your acceptance of the terms outlined in this Privacy Policy. We encourage you to read this policy carefully and contact us if you have any questions or concerns about our privacy practices.</p>
+
+        <p>Our commitment to privacy extends beyond mere compliance; it's an integral part of our brand essence. Just as we cultivate vibrant and sustainable gardens, we aim to cultivate a relationship of trust and respect with our clients by safeguarding their personal data. We regularly review our privacy practices to ensure they align with industry best practices and evolving regulatory requirements. This comprehensive policy details our approach to data protection, ensuring you are fully informed about how your information is handled from the moment you interact with Grow Garden Green.</p>
+
+        <h2>1. Information We Collect</h2>
+        <p>We collect various types of information to provide and improve our services, communicate with you, and enhance your experience with Grow Garden Green. The information we collect can be broadly categorized into two types: information you provide to us directly and information we collect automatically as you interact with our website.</p>
+
+        <h3>1.1. Information You Provide to Us</h3>
+        <p>When you interact with us, you may provide certain personal information directly. This includes, but is not limited to, the following:</p>
+        <ul>
+            <li><strong>Contact Information:</strong> This includes your name, email address, postal address, and phone number. We collect this when you fill out contact forms, request a consultation, subscribe to our newsletter, or communicate with us directly via email or phone. This information is essential for us to respond to your inquiries, schedule appointments, and deliver our services.</li>
+            <li><strong>Project Details:</strong> If you inquire about our garden design services, you may provide details about your property, such as its size, location, existing garden features, desired styles, budget range, and specific requirements for your project. This information helps us understand your needs and provide tailored design proposals.</li>
+            <li><strong>Communication Content:</strong> Records of your correspondence with us, including emails, chat messages, and phone call transcripts, are collected to help us manage your inquiries, provide support, and improve our customer service.</li>
+            <li><strong>Survey and Feedback Information:</strong> If you participate in our surveys, quizzes (e.g., "Your Garden Personality" quiz), or provide testimonials, we collect the information you submit. This helps us understand your preferences, gather feedback on our services, and improve our offerings.</li>
+            <li><strong>Account Information:</strong> If we implement user accounts in the future (e.g., for a "Virtual Garden Planner" or "Planting Calendar"), we would collect login credentials (username, password) and any profile information you choose to provide.</li>
+            <li><strong>Payment Information:</strong> While we do not process payments directly on our website, if you engage our services, payment details (e.g., bank account information for transfers, or credit card details if processed via a third-party secure gateway) would be collected by our invoicing system or payment processor. We ensure that any third-party payment processors we use comply with industry-standard security protocols.</li>
+            <li><strong>Marketing Preferences:</strong> Your preferences regarding receiving marketing communications from us, such as newsletters, promotional offers, and updates.</li>
+        </ul>
+        <p>The provision of this information is generally voluntary, but certain services or communications may not be possible without it. For example, we cannot schedule a consultation without your contact details.</p>
+
+        <h3>1.2. Information We Collect Automatically</h3>
+        <p>When you visit our website, certain information is collected automatically through technologies such as cookies, web beacons, and server logs. This information helps us understand how users interact with our site, analyze trends, administer the website, and gather demographic information about our user base as a whole. This data is typically aggregated and anonymized, but some elements may be linked to your device or browser.</p>
+        <ul>
+            <li><strong>Device and Usage Information:</strong> We collect information about the device you use to access our website, including your IP address, browser type and version, operating system, unique device identifiers, and mobile network information. We also collect details about your usage of our website, such as the pages you view, the time spent on each page, the links you click, the date and time of your visit, and referring URLs. This helps us optimize our website for different devices and understand popular content.</li>
+            <li><strong>Location Information:</strong> We may infer your general location (e.g., city, state, country) from your IP address. We do not collect precise geolocation data without your explicit consent. This information helps us understand our audience demographics and tailor content or services to regional interests.</li>
+            <li><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar tracking technologies (like web beacons and pixels) to track activity on our website and hold certain information. Cookies are small data files stored on your device that enable us to recognize your browser and capture certain information. For more detailed information about how we use cookies, please refer to our <a href="cookies.html">Cookie Policy</a>.</li>
+            <li><strong>Log Data:</strong> Our servers automatically record information that your browser sends whenever you visit our website. This log data may include your IP address, browser type, the page you were visiting before you came to our site, pages of our site that you visit, the time spent on those pages, information you search for on our site, access times and dates, and other statistics.</li>
+        </ul>
+        <p>This automatically collected data is crucial for maintaining the security and operational integrity of our website, diagnosing technical issues, and performing analytics to continuously improve the user experience. It allows us to identify popular content, understand user navigation patterns, and make informed decisions about website enhancements.</p>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the information we collect for various purposes, all aimed at providing you with exceptional service and enhancing your experience with Grow Garden Green. Our use of your data is always aligned with the purpose for which it was collected and is conducted in accordance with applicable privacy laws.</p>
+
+        <h3>2.1. To Provide and Manage Our Services</h3>
+        <ul>
+            <li><strong>Service Delivery:</strong> To provide you with the garden design, installation, maintenance, and consultation services you request. This includes scheduling appointments, conducting site visits, preparing design proposals, and managing project execution.</li>
+            <li><strong>Communication:</strong> To communicate with you about your inquiries, projects, appointments, and any updates related to our services. This ensures that you are always informed about the progress of your garden transformation.</li>
+            <li><strong>Customer Support:</strong> To provide customer support, respond to your questions, resolve issues, and address any concerns you may have regarding our services or website.</li>
+            <li><strong>Account Management:</strong> If user accounts are introduced, to manage your account, including processing your registration, verifying your identity, and maintaining your login credentials.</li>
+        </ul>
+
+        <h3>2.2. For Business Operations and Improvement</h3>
+        <ul>
+            <li><strong>Website Improvement:</strong> To understand how users interact with our website, identify areas for improvement, and enhance the functionality and user experience of our site. This includes analyzing traffic patterns, popular content, and user navigation.</li>
+            <li><strong>Analytics and Research:</strong> To perform data analysis, conduct research, and generate aggregated statistics about our user base and service usage. This helps us understand market trends, evaluate the effectiveness of our marketing campaigns, and make strategic business decisions.</li>
+            <li><strong>Security and Fraud Prevention:</strong> To detect, prevent, and address technical issues, security incidents, and fraudulent activities. This includes monitoring for suspicious activity, protecting against unauthorized access, and maintaining the integrity of our systems.</li>
+            <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, legal processes, and governmental requests. This includes responding to subpoenas, court orders, or other legal obligations.</li>
+            <li><strong>Internal Reporting:</strong> For internal business purposes, such as auditing, data analysis, and developing new services.</li>
+        </ul>
+
+        <h3>2.3. For Marketing and Promotional Purposes</h3>
+        <ul>
+            <li><strong>Marketing Communications:</strong> To send you newsletters, promotional offers, updates about our services, and other marketing communications that we believe may be of interest to you. You will always have the option to opt-out of these communications.</li>
+            <li><strong>Personalization:</strong> To personalize your experience on our website by presenting content and offers tailored to your interests and preferences, based on the information we have collected.</li>
+            <li><strong>Testimonials:</strong> With your explicit consent, to publish testimonials on our website or marketing materials, showcasing the positive experiences of our clients.</li>
+            <li><strong>Targeted Advertising:</strong> In the future, we may use collected data to deliver targeted advertisements on third-party platforms based on your interests and online behavior.</li>
+        </ul>
+        <p>We only use your personal information for purposes that are consistent with this Privacy Policy or for which we have obtained your consent. We do not sell your personal information to third parties for their independent marketing purposes.</p>
+
+        <h2>3. How We Share Your Information</h2>
+        <p>We may share your information with third parties in certain circumstances, always with your privacy and data security in mind. We do not sell your personal information to third parties for their independent marketing purposes.</p>
+
+        <h3>3.1. Service Providers</h3>
+        <p>We engage trusted third-party service providers to perform functions and provide services to us. These service providers may have access to your personal information only to the extent necessary to perform their functions and are obligated not to disclose or use it for any other purpose. Examples include:</p>
+        <ul>
+            <li><strong>IT and Hosting Providers:</strong> Companies that provide server hosting, data storage, and website maintenance services.</li>
+            <li><strong>Analytics Providers:</strong> Services like Google Analytics that help us understand website usage and performance.</li>
+            <li><strong>Marketing and Advertising Partners:</strong> Platforms that assist us with email campaigns, advertising, and marketing analytics.</li>
+            <li><strong>Communication Tools:</strong> Providers of CRM systems, email platforms, and online meeting tools.</li>
+            <li><strong>Payment Processors:</strong> Secure third-party gateways that handle payment transactions (we do not directly store sensitive payment card information).</li>
+            <li><strong>Professional Advisors:</strong> Lawyers, accountants, and other professional advisors who provide services to Grow Garden Green.</li>
+        </ul>
+
+        <h3>3.2. Business Transfers</h3>
+        <p>In the event that Grow Garden Green is involved in a merger, acquisition, reorganization, sale of assets, or bankruptcy, your personal information may be transferred as part of that transaction. We will notify you via email and/or a prominent notice on our website of any such change in ownership or control of your personal information, as well as any choices you may have regarding your personal information.</p>
+
+        <h3>3.3. Legal Requirements and Law Enforcement</h3>
+        <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court order or government agency). This includes instances where we believe in good faith that disclosure is necessary to:</p>
+        <ul>
+            <li>Comply with a legal obligation.</li>
+            <li>Protect and defend the rights or property of Grow Garden Green.</li>
+            <li>Prevent or investigate possible wrongdoing in connection with the service.</li>
+            <li>Protect the personal safety of users of the service or the public.</li>
+            <li>Protect against legal liability.</li>
+        </ul>
+
+        <h3>3.4. With Your Consent</h3>
+        <p>We may share your information with third parties when we have your explicit consent to do so. For example, if you provide a testimonial and agree for us to publish it, or if you request us to share your project details with a specific third-party contractor (e.g., for specialized hardscaping work).</p>
+
+        <h3>3.5. Aggregated or Anonymized Data</h3>
+        <p>We may share aggregated or anonymized data that cannot reasonably be used to identify you. This type of data is used for statistical analysis, research, and reporting purposes, such as analyzing website usage trends or the effectiveness of our marketing efforts.</p>
+
+        <p>We take reasonable steps to ensure that any third parties with whom we share your information adhere to privacy practices consistent with this policy and applicable laws. We enter into data processing agreements with service providers to ensure they handle your data securely and only for the purposes we specify.</p>
+
+        <h2>4. Data Security</h2>
+        <p>The security of your personal information is a top priority for Grow Garden Green. We implement a variety of technical and organizational measures designed to protect your data from unauthorized access, alteration, disclosure, or destruction. While no method of transmission over the Internet or method of electronic storage is 100% secure, we strive to use commercially acceptable means to protect your personal information.</p>
+        <ul>
+            <li><strong>Encryption:</strong> We use Secure Socket Layer (SSL) technology to encrypt data transmitted between your browser and our website, protecting information during online interactions (e.g., when filling out forms).</li>
+            <li><strong>Access Control:</strong> Access to your personal information is restricted to authorized employees, contractors, and agents who need to know that information in order to process it for us, and who are subject to strict contractual confidentiality obligations.</li>
+            <li><strong>Data Minimization:</strong> We adhere to the principle of data minimization, collecting only the personal information that is necessary for the purposes for which it is processed.</li>
+            <li><strong>Regular Audits and Reviews:</strong> We regularly review our security practices and update our systems to address new threats and vulnerabilities.</li>
+            <li><strong>Physical Security:</strong> Our data centers and physical storage locations are protected by appropriate physical security measures.</li>
+            <li><strong>Employee Training:</strong> Our staff receive regular training on data protection and privacy best practices to ensure they understand their responsibilities in handling personal information securely.</li>
+            <li><strong>Incident Response Plan:</strong> We have an incident response plan in place to address any potential data breaches or security incidents promptly and effectively, including notification procedures where required by law.</li>
+        </ul>
+        <p>Despite our best efforts, no security system is impenetrable. In the unlikely event of a data breach, we will take immediate steps to mitigate the impact, investigate the incident, and notify affected individuals and regulatory authorities as required by law. We encourage you to also take steps to protect your personal information, such as using strong, unique passwords and being cautious about sharing personal details online.</p>
+
+        <h2>5. Data Retention</h2>
+        <p>We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements. The specific retention period will vary depending on the type of information and the purpose for which it is used.</p>
+        <ul>
+            <li><strong>Service-Related Data:</strong> Information related to your garden design projects and services will be retained for a period necessary to complete the project, provide ongoing maintenance (if applicable), and address any post-completion inquiries or warranty claims. This period also accounts for any legal or regulatory obligations related to service contracts.</li>
+            <li><strong>Marketing Data:</strong> If you have opted in to receive marketing communications, we will retain your contact information for marketing purposes until you opt out or request its deletion.</li>
+            <li><strong>Website Usage Data:</strong> Automatically collected data, such as IP addresses and browsing activity, is typically retained for a shorter period, usually for analytics and security purposes, and then anonymized or deleted.</li>
+            <li><strong>Legal and Regulatory Compliance:</strong> We may retain certain information for longer periods if required by law (e.g., for tax and accounting purposes) or to resolve disputes, enforce our agreements, or protect our legal rights.</li>
+        </ul>
+        <p>When your personal information is no longer required, we will securely delete or anonymize it to prevent unauthorized access or use. In some cases, we may anonymize your personal information (so that it can no longer be associated with you) for research or statistical purposes, in which case we may use this information indefinitely without further notice to you.</p>
+
+        <h2>6. Your Data Protection Rights</h2>
+        <p>Depending on your location and applicable data protection laws, you may have certain rights regarding your personal information. Grow Garden Green is committed to facilitating the exercise of these rights.</p>
+        <ul>
+            <li><strong>Right to Access:</strong> You have the right to request a copy of the personal information we hold about you.</li>
+            <li><strong>Right to Rectification:</strong> You have the right to request that we correct any inaccurate or incomplete personal information we hold about you.</li>
+            <li><strong>Right to Erasure (Right to Be Forgotten):</strong> You have the right to request the deletion of your personal information under certain circumstances, such as when the data is no longer necessary for the purposes for which it was collected.</li>
+            <li><strong>Right to Restrict Processing:</strong> You have the right to request that we restrict the processing of your personal information under certain conditions, such as when you contest the accuracy of the data.</li>
+            <li><strong>Right to Data Portability:</strong> You have the right to receive your personal information in a structured, commonly used, and machine-readable format, and to transmit that data to another controller, where technically feasible.</li>
+            <li><strong>Right to Object:</strong> You have the right to object to the processing of your personal information for direct marketing purposes or when processing is based on legitimate interests (unless we demonstrate compelling legitimate grounds for the processing which override your interests, rights, and freedoms).</li>
+            <li><strong>Right to Withdraw Consent:</strong> If we are relying on your consent to process your personal information, you have the right to withdraw that consent at any time. Withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.</li>
+            <li><strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with a supervisory authority if you believe your data protection rights have been violated.</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us using the contact details provided at the end of this Privacy Policy. We will respond to your request in accordance with applicable data protection laws. We may need to verify your identity before fulfilling your request to ensure the security of your data.</p>
+        <p>Please note that these rights are not absolute and may be subject to certain conditions and exceptions under applicable law. For example, we may be required to retain certain information for legal or legitimate business purposes even if you request its deletion.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>Our website and services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18. If we become aware that we have collected personal information from a child under 18 without verifiable parental consent, we will take steps to remove that information from our servers. If you believe that a child under 18 has provided us with personal information, please contact us immediately.</p>
+        <p>We are committed to protecting the online privacy of children and encourage parents and guardians to play an active role in their children's online activities. Our website content is general audience appropriate, but our services are specifically designed for adult clients engaging in professional garden design and related services.</p>
+
+        <h2>8. International Data Transfers</h2>
+        <p>Grow Garden Green is based in India. If you are accessing our website or services from outside India, please be aware that your information may be transferred to, stored, and processed in India, where our servers and central databases are located. Data protection laws in India may differ from those in your country of residence.</p>
+        <p>By using our website and services, you understand that your information may be transferred to our facilities and those third parties with whom we share it as described in this Privacy Policy. When we transfer personal data internationally, we take appropriate safeguards to ensure that your personal information remains protected in accordance with this Privacy Policy and applicable data protection laws. This may include implementing standard contractual clauses approved by relevant authorities or relying on other legal mechanisms for data transfer.</p>
+        <p>Our commitment to data security and privacy extends to all international transfers, ensuring that your data is handled with the same level of care and protection regardless of where it is processed. We continuously monitor and adapt our practices to comply with global data transfer regulations and provide transparency regarding cross-border data flows.</p>
+
+        <h2>9. Third-Party Websites and Services</h2>
+        <p>Our website may contain links to third-party websites or services that are not operated by us. These links are provided for your convenience and information. Please be aware that we have no control over the content, privacy policies, or practices of these third-party sites or services. We strongly advise you to review the Privacy Policy of every site you visit.</p>
+        <p>The inclusion of any link does not imply endorsement by Grow Garden Green of the site or its operators. We are not responsible for the privacy practices or the content of such websites. When you click on a link to a third-party website, you are leaving our site, and your interactions are governed by the privacy policy of that third-party website. This Privacy Policy applies solely to information collected by Grow Garden Green.</p>
+        <p>Examples of third-party integrations or links you might encounter include social media sharing buttons, embedded videos, or links to payment gateways. While we select our partners carefully, we cannot be held responsible for their independent data handling practices.</p>
+
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this policy. We encourage you to review this Privacy Policy periodically for any changes.</p>
+        <p>Significant changes will be communicated through a prominent notice on our website or, where appropriate, by email. Your continued use of our website or services after any modifications to this Privacy Policy will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy. If you do not agree to the revised policy, you should discontinue using our website and services.</p>
+        <p>We believe in maintaining full transparency with our users, and regular updates to our Privacy Policy are part of our commitment to keeping you informed about how we protect your personal information. We recommend bookmarking this page and checking it regularly for the most current information on our privacy practices.</p>
+
+        <h2>11. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, our data practices, or if you wish to exercise your data protection rights, please do not hesitate to contact us:</p>
+        <ul>
+            <li><strong>By Email:</strong> <a href="mailto:privacy@growgardengreen.com">privacy@growgardengreen.com</a></li>
+            <li><strong>By Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a> (Monday - Saturday, 9:00 AM - 6:00 PM IST)</li>
+            <li><strong>By Mail:</strong><br>
+                Privacy Officer<br>
+                Grow Garden Green Headquarters<br>
+                123 Green Avenue, Garden City,<br>
+                Gurugram, Haryana 122001, India</li>
+        </ul>
+        <p>We are dedicated to addressing your inquiries promptly and thoroughly. When contacting us, please provide sufficient details to allow us to understand your request and respond effectively. We may require you to verify your identity before processing certain requests to ensure the security and privacy of your information.</p>
+        <p>Your feedback is invaluable to us as we continuously strive to enhance our data protection measures and maintain the highest standards of privacy. Thank you for trusting Grow Garden Green with your personal information.</p>
+
+        <h3>11.1. Role of the Privacy Officer</h3>
+        <p>Grow Garden Green has designated a Privacy Officer responsible for overseeing compliance with this Privacy Policy and applicable data protection laws. The Privacy Officer serves as the primary point of contact for all privacy-related inquiries, concerns, and requests from individuals. Their responsibilities include:</p>
+        <ul>
+            <li>Monitoring internal compliance with data protection policies and procedures.</li>
+            <li>Providing advice and guidance on data protection impact assessments.</li>
+            <li>Acting as a liaison with data protection authorities.</li>
+            <li>Handling data subject requests (e.g., requests for access, rectification, erasure).</li>
+            <li>Conducting regular privacy audits and reviews.</li>
+            <li>Ensuring all employees receive appropriate data protection training.</li>
+            <li>Maintaining records of data processing activities.</li>
+            <li>Advising on data breach response and notification procedures.</li>
+        </ul>
+        <p>The Privacy Officer is committed to ensuring that your data is handled responsibly and in accordance with your rights. You can reach the Privacy Officer directly using the contact details provided above.</p>
+
+        <h2>12. Governing Law</h2>
+        <p>This Privacy Policy shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions. Any disputes arising under or in connection with this Privacy Policy shall be subject to the exclusive jurisdiction of the courts located in Gurugram, Haryana, India.</p>
+        <p>While we aim to comply with global best practices in data privacy, our primary legal framework is that of India. Users accessing our services from other jurisdictions should be aware that their data will be processed in accordance with Indian law, which may offer different levels of data protection compared to their home country. We are committed to upholding the principles of fairness, transparency, and accountability in our data processing activities globally.</p>
+
+        <h2>13. Your Acceptance of These Terms</h2>
+        <p>By using this Site, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes. This Privacy Policy should be read in conjunction with our <a href="terms.html">Terms of Service</a> and <a href="cookies.html">Cookie Policy</a>.</p>
+        <p>We believe in providing clear and accessible information regarding our data practices. Your informed consent is crucial to us. We encourage you to review this policy periodically to stay informed about how we are protecting the personal information we collect. Should you have any reservations or require further clarification on any aspect of this policy, our team is readily available to assist you. Your trust is our most valuable asset.</p>
+
+        <h2>14. Specific Data Processing Scenarios and Extended Details</h2>
+
+        <h3>14.1. Data Collected During Consultations and Site Visits</h3>
+        <p>When you book a consultation, whether virtual or in-person, we collect specific details to ensure the most productive discussion. This includes not only your contact information but also preliminary information about your property, such as its address, approximate size, sun exposure, existing landscape features, and any specific challenges or aspirations you have for your garden. For in-person site visits, our designers may take photographs or videos of your property (with your explicit consent) to aid in the design process. These visual records are used solely for project development and internal reference, and are stored securely. We may also note details about soil type, drainage, existing plant health, and local climate conditions. This comprehensive data collection at the initial stage allows us to develop a highly personalized and effective garden design proposal tailored to your unique environment and preferences. All such data is treated with the same level of confidentiality and security as other personal information.</p>
+
+        <h3>14.2. Data from "Your Garden Personality" Quiz</h3>
+        <p>Our "Your Garden Personality" quiz is designed to help us understand your aesthetic preferences, functional needs, and lifestyle as they relate to your ideal garden. The responses you provide, which may include preferences for certain styles (e.g., modern, rustic), plant types, features (e.g., water features, fire pits), and how you intend to use your garden (e.g., entertaining, relaxation, play), are collected. This data is used to inform our design recommendations and ensure that the concepts we present are deeply aligned with your vision. While the quiz itself may not directly ask for personally identifiable information, the results are typically linked to your consultation inquiry if you choose to proceed. This allows our designers to have a richer understanding of your desires before the first design meeting. The aggregated, anonymized results of these quizzes may also be used for internal market research and to refine our service offerings, helping us identify emerging trends in garden design preferences.</p>
+
+        <h3>14.3. Data Related to Design Proposals and 3D Renders</h3>
+        <p>As part of our "Concept & Blueprint" phase, we develop detailed design proposals, including 2D blueprints and 3D renders. These documents inherently contain information about your property's layout, proposed structures, plant placements, and material selections. While these are design outputs, they are derived from and reflect the specific characteristics of your property. These files are shared with you for review and feedback, and are stored securely within our project management systems. They are crucial for the collaborative design process and for ensuring accurate implementation during the installation phase. We maintain strict access controls to these sensitive project files, ensuring they are only accessible to the project team members directly involved in your garden's design and execution. Upon project completion, these design documents are archived for record-keeping purposes, in line with our data retention policies.</p>
+
+        <h3>14.4. Data Collected During Installation and Project Management</h3>
+        <p>During the "Installation & Growth" phase, our project managers and installation teams collect operational data to ensure smooth execution. This may include progress reports, material usage logs, scheduling details, and communication records with contractors and suppliers. While this data is primarily operational, it may indirectly relate to your project and property. We also document any changes or adjustments made during the installation process to ensure accurate record-keeping. This data is vital for project oversight, quality control, and for addressing any issues that may arise. It also forms part of our internal project history, allowing us to learn from past projects and continually improve our processes. All such project management data is handled with due diligence and security protocols.</p>
+
+        <h3>14.5. Data from Maintenance Plans and Ongoing Care</h3>
+        <p>For clients who opt for our "Ongoing Care" and maintenance plans, we collect and maintain records related to the health and development of your garden. This includes details of maintenance visits, specific treatments applied (e.g., fertilization, pest control), plant health assessments, irrigation system performance logs, and seasonal planting schedules. This information is essential for providing effective and personalized care for your garden, ensuring its long-term health and beauty. It allows our horticulturalists to track progress, anticipate needs, and respond proactively to any challenges. This data is regularly updated and reviewed by our maintenance teams. It also helps us provide you with comprehensive reports on your garden's condition and the services provided. The collection and use of this data are integral to delivering our promise of year-round garden vitality.</p>
+
+        <h3>14.6. Data from Client Testimonials and Case Studies</h3>
+        <p>When you provide a testimonial or agree to be featured in a case study, we collect your feedback, comments, and potentially your name, location, and photos of your garden. This is always done with your explicit consent. We use this information to showcase our work, build trust with prospective clients, and for marketing purposes on our website and other promotional materials. We ensure that any testimonials or case studies accurately reflect your experience and that only the information you have agreed to share is published. You have the right to withdraw your consent for the use of your testimonial at any time, and we will promptly remove it from our publicly accessible platforms.</p>
+
+        <h3>14.7. Data from Interactive Features (Future Implementation)</h3>
+        <p>As mentioned, we plan to introduce interactive features like a "Virtual Garden Planner," "Planting Calendar," and "Eco-Score Widget." When these features are implemented, they may involve the collection of additional data:</p>
+        <ul>
+            <li><strong>Virtual Garden Planner:</strong> Data related to your custom designs within the planner, including chosen elements, layouts, and dimensions. This data would be stored to allow you to save and revisit your designs.</li>
+            <li><strong>Planting Calendar:</strong> Information about your preferred plants, planting zones, and customized reminders. This data would be used to provide personalized alerts and advice.</li>
+            <li><strong>Eco-Score Widget:</strong> Inputs you provide about your garden's features (e.g., irrigation type, plant choices) to calculate an eco-score. This data would be used to provide environmental impact insights.</li>
+        </ul>
+        <p>The collection and use of data from these future interactive features will be clearly communicated at the point of interaction, and will be subject to this Privacy Policy. We will ensure that any data collected through these tools is used solely to enhance the functionality of the tools and provide you with a personalized experience, or for aggregated, anonymized analysis to improve our services.</p>
+
+        <h3>14.8. Data from "Get Started" Forms and Quote Requests</h3>
+        <p>When you use our "Get Started" forms, whether for an interactive quote tool (future) or to book a consultation, we collect the information you input, such as estimated garden size, preferred style, budget range, your name, email, phone number, and a brief description of your project. This data is essential for us to understand your initial needs, prepare for your consultation, and provide you with relevant information or preliminary estimates. This information is securely transmitted and stored in our customer relationship management (CRM) system. It allows our sales and design teams to efficiently manage inquiries and ensure a smooth onboarding process for new clients. We do not share this initial inquiry data with third parties except for the purpose of internal processing and communication with you.</p>
+
+        <h3>14.9. Data from Community Workshops and Virtual Tutorials</h3>
+        <p>If you register for or participate in our community workshops or virtual tutorials, we may collect your name, email address, and any other registration details required. This information is used to manage your registration, provide you with access to the workshop/tutorial, send reminders, and share relevant follow-up materials. We may also collect feedback from participants to improve future educational offerings. Depending on the platform used for virtual tutorials, certain usage data (e.g., attendance duration, engagement with features) might be collected by the platform provider, subject to their privacy policies. Our goal is to foster a knowledgeable gardening community, and data collected in this context is solely for the purpose of facilitating and improving these educational initiatives.</p>
+
+        <h2>15. Your Choices Regarding Your Information</h2>
+        <p>We believe in giving you control over your personal information. Here are the choices you have regarding the data we collect and how we use it:</p>
+        <ul>
+            <li><strong>Opting Out of Marketing Communications:</strong> You can opt out of receiving marketing emails from us by following the unsubscribe instructions provided in those emails, or by contacting us directly. Please note that even if you opt out of marketing communications, we may still send you non-promotional messages related to your services, inquiries, or transactional updates.</li>
+            <li><strong>Cookie Preferences:</strong> Most web browsers are set to accept cookies by default. You can usually modify your browser settings to decline cookies or to notify you when a cookie is being placed. However, if you disable cookies, some features of our website may not function properly. For more detailed information, please refer to our <a href="cookies.html">Cookie Policy</a>.</li>
+            <li><strong>Accessing and Updating Your Information:</strong> You can request to access, review, or update the personal information we hold about you by contacting us. We will make reasonable efforts to provide you with access to your information and to correct any inaccuracies.</li>
+            <li><strong>Deletion of Information:</strong> You can request the deletion of your personal information, subject to certain legal obligations or legitimate business interests that may require us to retain some data.</li>
+            <li><strong>Do Not Track Signals:</strong> Some web browsers may transmit "do not track" signals. As there is no universally agreed-upon standard for how to respond to these signals, our website currently does not alter its practices when it receives such a signal.</li>
+        </ul>
+        <p>We are committed to respecting your choices and will endeavor to fulfill your requests in a timely and efficient manner, in accordance with applicable legal requirements. Please note that certain data is essential for us to provide our services, and requesting its deletion may impact our ability to serve you.</p>
+
+        <h2>16. Data Protection Officer (DPO) / Privacy Contact</h2>
+        <p>For any questions, concerns, or requests regarding this Privacy Policy or our data processing activities, please contact our designated Privacy Officer:</p>
+        <p><strong>Privacy Officer</strong><br>
+        Grow Garden Green Headquarters<br>
+        123 Green Avenue, Garden City,<br>
+        Gurugram, Haryana 122001, India</p>
+        <p><strong>Email:</strong> <a href="mailto:privacy@growgardengreen.com">privacy@growgardengreen.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p>Our Privacy Officer is responsible for ensuring that Grow Garden Green adheres to the highest standards of data protection and is available to assist you with any privacy-related matters. We aim to respond to all legitimate requests within a reasonable timeframe, typically within 30 days. If your request is complex or involves a large volume of data, it may take longer, but we will keep you informed of the progress.</p>
+
+        <h2>17. Severability</h2>
+        <p>If any provision of this Privacy Policy is found to be unenforceable or invalid under any applicable law, such unenforceability or invalidity shall not render this Privacy Policy unenforceable or invalid as a whole. Such provisions shall be deleted without affecting the remaining provisions herein.</p>
+
+        <h2>18. Entire Agreement</h2>
+        <p>This Privacy Policy, together with our Disclaimer, Terms of Service, and Cookie Policy, constitutes the entire agreement between you and Grow Garden Green regarding the use of our website and services, and supersedes all prior or contemporaneous communications and proposals, whether oral or written, between you and Grow Garden Green with respect to such subject matter.</p>
+
+        <h2>19. No Waiver</h2>
+        <p>No waiver of any term of this Privacy Policy shall be deemed a further or continuing waiver of such term or any other term, and Grow Garden Green’s failure to assert any right or provision under this Privacy Policy shall not constitute a waiver of such right or provision.</p>
+
+        <h2>20. Feedback and Continuous Improvement</h2>
+        <p>We welcome your feedback on this Privacy Policy and our privacy practices. Your input helps us to continuously improve and ensure that we are meeting your expectations regarding data protection. If you have any suggestions or comments, please feel free to reach out to our Privacy Officer. We are committed to an ongoing process of review and enhancement of our privacy framework to adapt to new technologies, legal developments, and user expectations.</p>
+
+        <p>Thank you for taking the time to read our Privacy Policy. We appreciate your trust in Grow Garden Green and are dedicated to protecting your privacy as we help you cultivate your lush sanctuary.</p>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Grow Garden Green</h3>
+                <p>Transforming outdoor spaces into vibrant, eco-friendly sanctuaries with creative landscape architecture, sustainable planting, and year-round maintenance.</p>
+                <div class="social-links" style="margin-top: 20px;">
+                    <a href="https://facebook.com/growgardengreen" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/growgardengreen" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com/growgardengreen" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://linkedin.com/company/growgardengreen" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#our-process">Our Process</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#inspiration-blog">Blog</a></li>
+                    <li><a href="index.html#get-started">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="index.html#disclaimer">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong><br>
+                Grow Garden Green Headquarters<br>
+                123 Green Avenue, Garden City,<br>
+                Gurugram, Haryana 122001, India</p>
+                <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@growgardengreen.com">info@growgardengreen.com</a></p>
+                <p><strong>Business Hours:</strong><br>
+                Mon - Sat: 9:00 AM - 6:00 PM IST</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Grow Garden Green. All rights reserved. Crafting lush sanctuaries, one garden at a time. Designed with passion, built for nature.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for social icons. You can replace with your own icons or remove if not needed. -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

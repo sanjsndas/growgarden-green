@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Grow Garden Green</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E7D32; /* Forest Green */
+            --accent-color: #A5D6A7;   /* Soft Moss */
+            --highlight-color: #FFEB3B; /* Sunshine Yellow */
+            --text-color: #333;
+            --light-grey: #f4f4f4;
+            --dark-grey: #666;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 2.8em; }
+        h2 { font-size: 2.2em; }
+        h3 { font-size: 1.8em; }
+        h4 { font-size: 1.4em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 40px; /* Consistent with Privacy Policy */
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* --- Main Content Area --- */
+        .terms-content {
+            padding: 60px 0;
+            text-align: left;
+        }
+
+        .terms-content h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .terms-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .terms-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--dark-grey);
+        }
+
+        .terms-content p {
+            margin-bottom: 1em;
+            font-size: 1em;
+            color: var(--text-color);
+        }
+
+        .terms-content ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1em;
+        }
+
+        .terms-content ol {
+            list-style: decimal;
+            margin-left: 25px;
+            margin-bottom: 1em;
+        }
+
+        .terms-content li {
+            margin-bottom: 0.5em;
+        }
+
+        .terms-content strong {
+            color: var(--primary-color);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        footer .footer-section h3 {
+            color: var(--highlight-color);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        footer .footer-section p,
+        footer .footer-section ul {
+            color: #ccc;
+            font-size: 0.95em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        footer .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-section ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.8em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: var(--highlight-color);
+        }
+
+        footer .copyright {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .container {
+                padding: 20px; /* Revert to original padding on smaller screens for better content fit */
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Grow Garden Green 🌿</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="terms-content container">
+        <h1>Terms of Service for Grow Garden Green</h1>
+        <p><strong>Last Updated: July 8, 2025</strong></p>
+
+        <p>Welcome to Grow Garden Green! These Terms of Service ("Terms") govern your access to and use of our website, growgardengreen.com (the "Site"), and the services we offer, including garden design, installation, maintenance, consultations, and related offerings (collectively, the "Services"). By accessing or using our Site and Services, you agree to be bound by these Terms, our Privacy Policy, Cookie Policy, and Disclaimer. If you do not agree to these Terms, please do not use our Site or engage with our Services. These Terms constitute a legally binding agreement between you and Grow Garden Green. We encourage you to read them carefully, as they contain important information regarding your legal rights, remedies, and obligations. Your continued use of the Site and Services indicates your acceptance of any changes to these Terms.</p>
+
+        <p>Grow Garden Green is dedicated to transforming outdoor spaces into vibrant, eco-friendly sanctuaries. Our commitment to excellence extends to ensuring a clear and fair understanding of the terms under which we operate. These Terms are designed to protect both you, our valued client, and Grow Garden Green, establishing a framework for a transparent and successful partnership. We believe that a strong foundation of clear communication and mutual understanding is essential for cultivating not just beautiful gardens, but also lasting relationships. Please note that specific project proposals and contracts will contain additional terms and conditions relevant to your unique garden project, which will supplement these general Terms of Service.</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using the Site or Services, you affirm that you are at least 18 years old and have the legal capacity to enter into a binding agreement. If you are accessing or using the Site or Services on behalf of a company or other legal entity, you represent that you have the authority to bind such entity to these Terms. Your use of the Site and Services is also subject to all applicable laws and regulations.</p>
+        <p>These Terms, along with any other policies or guidelines referenced herein (including our Privacy Policy, Cookie Policy, and Disclaimer), form the entire agreement between you and Grow Garden Green regarding your use of the Site and Services. We reserve the right to modify these Terms at any time, and such modifications will be effective immediately upon posting on the Site. Your continued use of the Site or Services after any such modifications indicates your acceptance of the revised Terms. It is your responsibility to review these Terms periodically for changes. If you do not agree to the updated Terms, your sole recourse is to discontinue using the Site and Services.</p>
+
+        <h2>2. Description of Services</h2>
+        <p>Grow Garden Green provides bespoke garden design services, including but not limited to:</p>
+        <ul>
+            <li><strong>Custom Garden Design:</strong> Development of personalized garden plans, including conceptual designs, 2D blueprints, 3D renders, plant palettes, and material selections.</li>
+            <li><strong>Complete Installation:</strong> Professional execution of garden designs, including softscapes (planting), hardscapes (patios, pathways, decking), water features, and outdoor lighting.</li>
+            <li><strong>Sustainable Upgrades:</strong> Implementation of eco-friendly solutions such as rainwater harvesting, native plant beds, and smart irrigation systems.</li>
+            <li><strong>Maintenance Plans:</strong> Ongoing care services including pruning, fertilization, pest management, seasonal planting, and general garden upkeep.</li>
+            <li><strong>Consultations:</strong> Initial discussions, site visits, and expert advice sessions.</li>
+            <li><strong>Educational Content:</strong> Access to blog articles, guides, and potentially future workshops or tutorials related to gardening and sustainable practices.</li>
+        </ul>
+        <p>The specific scope of Services for each client will be detailed in a separate, written proposal or contract ("Project Agreement"), which will incorporate these Terms by reference. In the event of any conflict between these Terms and a Project Agreement, the terms of the Project Agreement shall prevail for that specific project. Our Services are provided with the utmost care and professionalism, aiming to transform your outdoor space into a thriving, beautiful, and sustainable sanctuary.</p>
+        <p>We continuously strive to innovate and expand our service offerings. Any new features or services introduced to the Site will also be subject to these Terms. While we endeavor to provide accurate descriptions of our Services, slight variations may occur due to the dynamic nature of horticultural and landscape work, and the specific conditions of each project site. We are committed to open communication and will inform you of any significant deviations or necessary adjustments during the project lifecycle.</p>
+
+        <h2>3. User Obligations and Conduct</h2>
+        <p>As a user of our Site and Services, you agree to:</p>
+        <ul>
+            <li><strong>Provide Accurate Information:</strong> Ensure that all information you provide to Grow Garden Green, including personal details, project requirements, and property information, is accurate, complete, and up-to-date.</li>
+            <li><strong>Lawful Use:</strong> Use the Site and Services only for lawful purposes and in accordance with these Terms. You agree not to use the Site in any way that violates any applicable local, national, or international law or regulation.</li>
+            <li><strong>Respect Intellectual Property:</strong> Respect the intellectual property rights of Grow Garden Green and third parties. You agree not to copy, reproduce, distribute, or create derivative works from any content on the Site without explicit written permission.</li>
+            <li><strong>No Misuse:</strong> Not to misuse the Site by knowingly introducing viruses, trojans, worms, logic bombs, or other material that is malicious or technologically harmful. You must not attempt to gain unauthorized access to our Site, the server on which our Site is stored, or any server, computer, or database connected to our Site.</li>
+            <li><strong>Cooperation:</strong> Cooperate fully with Grow Garden Green during the provision of Services, including providing timely access to your property for site visits, consultations, and installation work, and providing prompt feedback on design proposals.</li>
+            <li><strong>Responsible Use of Interactive Features:</strong> If interactive features (e.g., virtual planner, quote tool) are available, use them responsibly and not for any fraudulent, misleading, or malicious purposes.</li>
+            <li><strong>Maintain Confidentiality:</strong> Keep any login credentials or account information confidential and be responsible for all activities that occur under your account.</li>
+            <li><strong>Timely Payments:</strong> Adhere to the payment schedules and terms outlined in your Project Agreement for Services rendered.</li>
+        </ul>
+        <p>Failure to comply with these obligations may result in the suspension or termination of your access to the Site and Services, and may also lead to legal action. We reserve the right to refuse service, terminate accounts, or cancel orders at our sole discretion if we believe that your conduct violates these Terms or is harmful to other users, third parties, or Grow Garden Green.</p>
+        <p>We expect all users to engage with our Site and Services in a respectful and constructive manner. Any form of harassment, abuse, or discriminatory behavior towards Grow Garden Green staff, other users, or third parties is strictly prohibited. We are committed to fostering a positive and collaborative environment for all our clients and partners.</p>
+
+        <h2>4. Intellectual Property Rights</h2>
+        <p>All content on the Grow Garden Green Site, including but not limited to text, graphics, logos, images, videos, software, design concepts, blueprints, 3D renders, and the overall "look and feel" of the Site and our designs, are the exclusive property of Grow Garden Green or its licensors and are protected by copyright, trademark, and other intellectual property laws. The compilation of all content on this Site is the exclusive property of Grow Garden Green and protected by copyright laws.</p>
+        <ul>
+            <li><strong>Limited License:</strong> You are granted a limited, non-exclusive, non-transferable, revocable license to access and use the Site and Services for your personal, non-commercial use, in accordance with these Terms.</li>
+            <li><strong>Restrictions:</strong> You may not copy, reproduce, distribute, transmit, display, perform, publish, license, modify, create derivative works from, sell, or exploit any content, software, products, or services obtained from the Site without the express written permission of Grow Garden Green.</li>
+            <li><strong>Design Ownership:</strong> While we create custom garden designs for you, Grow Garden Green retains the intellectual property rights to the underlying design concepts, methodologies, and architectural plans. Upon full payment for Services, you are granted a non-exclusive license to use the specific design implemented on your property for personal enjoyment. Any commercial use, reproduction for other properties, or public display beyond personal use requires prior written consent from Grow Garden Green.</li>
+            <li><strong>Trademarks:</strong> The Grow Garden Green name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Grow Garden Green or its affiliates or licensors. You must not use such marks without the prior written permission of Grow Garden Green.</li>
+        </ul>
+        <p>Any unauthorized use of our intellectual property is strictly prohibited and may result in legal action. We take the protection of our creative work seriously and expect our users and clients to respect these rights. Your engagement with our Services allows you to benefit from our expertise and designs, but does not transfer ownership of the creative works themselves.</p>
+
+        <h2>5. Disclaimers and Warranties</h2>
+        <p>The information and services on the Grow Garden Green Site are provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied. Grow Garden Green disclaims all warranties, express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, and accuracy. We do not warrant that the Site or Services will be uninterrupted, error-free, secure, or free of viruses or other harmful components.</p>
+        <ul>
+            <li><strong>Design Variability:</strong> Garden designs and plant selections are subject to natural variations, climate conditions, soil quality, and availability of materials. While we strive for accuracy in our proposals and renders, the final appearance of your garden may vary. We do not guarantee specific growth rates, bloom times, or long-term plant survival beyond the terms specified in a separate Project Agreement or warranty for plants (if any).</li>
+            <li><strong>Estimates:</strong> Any cost estimates or preliminary quotes provided through the Site are for informational purposes only and are not binding offers. Final pricing will be determined by a detailed Project Agreement.</li>
+            <li><strong>Third-Party Content:</strong> Our Site may contain links to third-party websites or content. We do not endorse and are not responsible for the content or practices of these third-party sites. Your interaction with any third-party website is at your own risk.</li>
+            <li><strong>Professional Advice:</strong> The content on our blog and other informational sections is for general guidance only and does not constitute professional horticultural, landscaping, or legal advice. Always consult with a qualified professional for advice tailored to your specific situation.</li>
+            <li><strong>No Guarantee of Results:</strong> While we endeavor to create beautiful and thriving gardens, we cannot guarantee specific outcomes or results due to the inherent variability of living plants and environmental factors. Our commitment is to apply our expertise and best practices.</li>
+            <li><strong>Site Availability:</strong> We do not guarantee that the Site will always be available or uninterrupted. We may suspend, withdraw, discontinue, or change all or any part of our Site without notice.</li>
+        </ul>
+        <p>You acknowledge that your use of the Site and Services is at your sole risk. Grow Garden Green shall not be liable for any damages, losses, or expenses arising from your use of, or inability to use, the Site or Services, or from any errors, omissions, or interruptions on the Site.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, in no event shall Grow Garden Green, its affiliates, directors, employees, agents, suppliers, or licensors be liable for any indirect, incidental, special, consequential, punitive, or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses (even if Grow Garden Green has been advised of the possibility of such damages), arising out of or in connection with:</p>
+        <ul>
+            <li>Your access to or use of or inability to access or use the Site or Services;</li>
+            <li>Any conduct or content of any third party on the Site or Services;</li>
+            <li>Any content obtained from the Site or Services;</li>
+            <li>Unauthorized access, use, or alteration of your transmissions or content;</li>
+            <li>Any errors or omissions in the Site's content;</li>
+            <li>Any failure of performance, error, omission, interruption, defect, delay in operation or transmission, computer virus, or line or system failure.</li>
+        </ul>
+        <p>In no event shall the aggregate liability of Grow Garden Green for all claims relating to the Site or Services exceed the amount you paid to Grow Garden Green for the Services in question, or one hundred Indian Rupees (₹100), whichever is greater. This limitation of liability applies whether the alleged liability is based on contract, tort, negligence, strict liability, or any other basis.</p>
+        <p>Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you. In such jurisdictions, Grow Garden Green's liability will be limited to the greatest extent permitted by law.</p>
+
+        <h2>7. Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless Grow Garden Green, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:</p>
+        <ul>
+            <li>Your violation of these Terms of Service;</li>
+            <li>Your use of the Site and Services, including, but not limited to, your submissions, use of the Site's content, services, and products other than as expressly authorized in these Terms;</li>
+            <li>Your negligence or willful misconduct;</li>
+            <li>Your violation of any rights of another party, including but not limited to intellectual property rights or privacy rights.</li>
+        </ul>
+        <p>Grow Garden Green reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which event you will cooperate with Grow Garden Green in asserting any available defenses.</p>
+
+        <h2>8. Governing Law and Jurisdiction</h2>
+        <p>These Terms and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law principles.</p>
+        <p>You agree that any legal action or proceeding arising out of or relating to these Terms or the Services shall be exclusively brought in the courts located in Gurugram, Haryana, India. You hereby consent to the personal jurisdiction of such courts and waive any objection as to inconvenient forum.</p>
+        <p>While we operate globally, our legal framework is firmly rooted in Indian law. This ensures clarity and consistency in the application of these Terms. We encourage international users to understand that their interactions with Grow Garden Green will be governed by the laws of India.</p>
+
+        <h2>9. Termination</h2>
+        <p>We may terminate or suspend your access to our Site and Services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms. Upon termination, your right to use the Site and Services will immediately cease.</p>
+        <ul>
+            <li><strong>Termination by You:</strong> You may cease using the Site and Services at any time. If you wish to terminate any ongoing Services, you must do so in accordance with the terms outlined in your specific Project Agreement.</li>
+            <li><strong>Effect of Termination:</strong> Upon termination, all provisions of these Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</li>
+            <li><strong>Outstanding Payments:</strong> Termination of Services does not relieve you of any obligation to pay outstanding fees for Services rendered prior to the effective date of termination.</li>
+        </ul>
+        <p>We reserve the right to remove or refuse to post any content you submit for any reason, without notice. We also reserve the right to take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the Site or Services.</p>
+
+        <h2>10. Changes to Terms</h2>
+        <p>Grow Garden Green reserves the right, at its sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. We will indicate the "Last Updated" date at the top of these Terms.</p>
+        <p>By continuing to access or use our Site or Services after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Site and Services. We encourage you to review these Terms periodically to stay informed about our updated policies.</p>
+
+        <h2>11. Severability</h2>
+        <p>If any provision of these Terms is held to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions of these Terms will remain in full force and effect. The invalid or unenforceable provision will be replaced by a valid and enforceable provision that most closely matches the intent of the original provision.</p>
+
+        <h2>12. Entire Agreement</h2>
+        <p>These Terms, together with our Privacy Policy, Cookie Policy, and Disclaimer, constitute the entire agreement between you and Grow Garden Green regarding your use of the Site and Services, and supersede all prior or contemporaneous communications and proposals, whether oral or written, between you and Grow Garden Green with respect to such subject matter.</p>
+
+        <h2>13. No Waiver</h2>
+        <p>No waiver of any term or condition set forth in these Terms shall be deemed a further or continuing waiver of such term or condition or any other term or condition, and any failure of Grow Garden Green to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+
+        <h2>14. Force Majeure</h2>
+        <p>Grow Garden Green shall not be liable for any failure or delay in performing its obligations under these Terms where such failure or delay results from any cause beyond its reasonable control, including, but not limited to, acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes or shortages of transportation facilities, fuel, energy, labor or materials, or natural disasters. In such an event, Grow Garden Green's obligations will be suspended for the duration of the force majeure event.</p>
+
+        <h2>15. Feedback and Complaints</h2>
+        <p>We welcome your feedback on our Site and Services. If you have any questions, comments, or complaints regarding these Terms or our Services, please contact us using the information provided below. We are committed to addressing your concerns promptly and fairly.</p>
+        <p>While we strive for perfection, we understand that issues may arise. Your constructive feedback is invaluable in helping us improve our services and maintain the highest standards of client satisfaction. We encourage you to reach out directly with any concerns before resorting to external measures.</p>
+
+        <h2>16. Contact Information</h2>
+        <p>For any questions or concerns regarding these Terms of Service, please contact us:</p>
+        <ul>
+            <li><strong>By Email:</strong> <a href="mailto:info@growgardengreen.com">info@growgardengreen.com</a></li>
+            <li><strong>By Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a> (Monday - Saturday, 9:00 AM - 6:00 PM IST)</li>
+            <li><strong>By Mail:</strong><br>
+                Grow Garden Green Headquarters<br>
+                123 Green Avenue, Garden City,<br>
+                Gurugram, Haryana 122001, India</li>
+        </ul>
+        <p>We are dedicated to addressing your inquiries promptly and thoroughly. Please provide sufficient details to allow us to understand your request and respond effectively.</p>
+
+        <h2>17. Specific Provisions for Project Agreements</h2>
+        <p>It is important to reiterate that while these Terms of Service provide a general framework, specific details regarding your garden design, installation, or maintenance project will be outlined in a separate, formal Project Agreement. This Project Agreement will include, but not be limited to:</p>
+        <ul>
+            <li><strong>Detailed Scope of Work:</strong> A precise description of the services to be provided, including design elements, plant species, materials, and specific features.</li>
+            <li><strong>Project Timeline:</strong> Estimated start and completion dates, including key milestones.</li>
+            <li><strong>Payment Schedule:</strong> Breakdown of costs, payment due dates, and acceptable payment methods.</li>
+            <li><strong>Change Order Procedures:</strong> Process for requesting and approving modifications to the original scope of work.</li>
+            <li><strong>Warranties and Guarantees:</strong> Any specific warranties provided for plants, materials, or workmanship, and their respective durations and conditions.</li>
+            <li><strong>Client Responsibilities:</strong> Specific actions or provisions required from the client to facilitate project completion (e.g., site access, utility availability).</li>
+            <li><strong>Cancellation and Refund Policy:</strong> Terms under which a project can be cancelled by either party and any applicable refund or cancellation fees.</li>
+            <li><strong>Dispute Resolution:</strong> Procedures for resolving any disagreements that may arise during the project.</li>
+            <li><strong>Insurance Details:</strong> Information regarding Grow Garden Green's liability insurance.</li>
+        </ul>
+        <p>The Project Agreement will be presented to you for review and signature before any substantial work begins. It is crucial that you read and understand this document fully, as it will govern the specifics of your garden project. These Terms of Service will apply concurrently with the Project Agreement, with the Project Agreement taking precedence in case of any direct conflict regarding project specifics.</p>
+
+        <h2>18. User-Generated Content (If Applicable in Future)</h2>
+        <p>While our current Site primarily features content generated by Grow Garden Green, we may, in the future, allow users to submit content (e.g., comments on blog posts, reviews, or submissions to a community gallery). If such features are implemented, the following terms will apply:</p>
+        <ul>
+            <li><strong>License to Grow Garden Green:</strong> By submitting content, you grant Grow Garden Green a worldwide, non-exclusive, royalty-free, transferable, and sublicensable license to use, reproduce, distribute, prepare derivative works of, display, and perform the content in connection with the Site and Grow Garden Green's business, including for promoting and redistributing part or all of the Site (and derivative works thereof) in any media formats and through any media channels.</li>
+            <li><strong>Your Responsibility:</strong> You are solely responsible for your content and the consequences of posting or publishing it. You affirm, represent, and warrant that you own or have the necessary licenses, rights, consents, and permissions to publish content you submit.</li>
+            <li><strong>Prohibited Content:</strong> You agree not to submit content that is illegal, obscene, defamatory, threatening, infringing of intellectual property rights, invasive of privacy, or otherwise injurious or objectionable to third parties.</li>
+            <li><strong>Monitoring and Removal:</strong> Grow Garden Green reserves the right to monitor, edit, or remove any content at its sole discretion, without notice, for any reason, including content that violates these Terms.</li>
+        </ul>
+        <p>We are committed to maintaining a positive and respectful online community. Any user-generated content will be expected to adhere to these principles, and we reserve the right to moderate accordingly.</p>
+
+        <h2>19. Digital Communications</h2>
+        <p>When you visit the Site or send emails to us, you are communicating with us electronically. You consent to receive communications from us electronically. We will communicate with you by email or by posting notices on this Site. You agree that all agreements, notices, disclosures, and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing.</p>
+
+        <h2>20. Headings</h2>
+        <p>The headings and subheadings in these Terms are for convenience only and shall not affect the interpretation of these Terms.</p>
+
+        <p>Thank you for choosing Grow Garden Green. We look forward to creating your lush sanctuary.</p>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Grow Garden Green</h3>
+                <p>Transforming outdoor spaces into vibrant, eco-friendly sanctuaries with creative landscape architecture, sustainable planting, and year-round maintenance.</p>
+                <div class="social-links" style="margin-top: 20px;">
+                    <a href="https://facebook.com/growgardengreen" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/growgardengreen" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com/growgardengreen" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://linkedin.com/company/growgardengreen" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#our-process">Our Process</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#inspiration-blog">Blog</a></li>
+                    <li><a href="index.html#get-started">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="index.html#disclaimer">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong><br>
+                Grow Garden Green Headquarters<br>
+                123 Green Avenue, Garden City,<br>
+                Gurugram, Haryana 122001, India</p>
+                <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@growgardengreen.com">info@growgardengreen.com</a></p>
+                <p><strong>Business Hours:</strong><br>
+                Mon - Sat: 9:00 AM - 6:00 PM IST</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Grow Garden Green. All rights reserved. Crafting lush sanctuaries, one garden at a time. Designed with passion, built for nature.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for social icons. You can replace with your own icons or remove if not needed. -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

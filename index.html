@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Garden Green — Designing Your Lush Sanctuary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E7D32; /* Forest Green */
+            --accent-color: #A5D6A7;   /* Soft Moss */
+            --highlight-color: #FFEB3B; /* Sunshine Yellow */
+            --text-color: #333;
+            --light-grey: #f4f4f4;
+            --dark-grey: #666;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 2.8em; }
+        h2 { font-size: 2.2em; }
+        h3 { font-size: 1.8em; }
+        h4 { font-size: 1.4em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* --- Hero Banner --- */
+        .hero-banner {
+            position: relative;
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-banner video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover; /* Ensures video covers the area */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-ctas .btn {
+            display: inline-block;
+            background-color: var(--highlight-color);
+            color: var(--primary-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-ctas .btn:hover {
+            background-color: #FFD700;
+            transform: translateY(-3px);
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--light-grey);
+        }
+
+        section h2 {
+            margin-bottom: 40px;
+        }
+
+        /* --- Brand Essence --- */
+        #brand-essence p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: var(--dark-grey);
+        }
+
+        /* --- Our Process --- */
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+
+        .process-step h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+
+        .process-step ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .process-step ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .process-step ul li::before {
+            content: '🌿'; /* Leaf icon */
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-size: 1.2em;
+        }
+
+        /* --- Portfolio --- */
+        #portfolio .filters {
+            margin-bottom: 40px;
+        }
+
+        #portfolio .filters button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #portfolio .filters button:hover,
+        #portfolio .filters button.active {
+            background-color: var(--primary-color);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-item .content {
+            padding: 20px;
+        }
+
+        .portfolio-item h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .portfolio-item p {
+            font-size: 0.95em;
+            color: var(--dark-grey);
+            margin-bottom: 15px;
+        }
+
+        .client-testimonial {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--accent-color);
+            color: #fff;
+            border-radius: 8px;
+            font-style: italic;
+            position: relative;
+        }
+
+        .client-testimonial::before {
+            content: '“';
+            font-size: 4em;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .client-testimonial p {
+            margin: 0;
+            padding-left: 50px;
+            font-size: 1.1em;
+        }
+
+        .client-testimonial .author {
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: right;
+            font-style: normal;
+        }
+
+        /* --- Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-card ul li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .service-card ul li::before {
+            content: '✅'; /* Checkmark icon */
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-size: 1.1em;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px; /* Fixed height for service images */
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* --- Inspiration Blog --- */
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-post {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .blog-post h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .blog-post p {
+            font-size: 0.95em;
+            color: var(--dark-grey);
+        }
+
+        .blog-post a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .blog-post a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Get Started --- */
+        #get-started .get-started-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .get-started-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .get-started-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .get-started-card form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .get-started-card label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .get-started-card input[type="text"],
+        .get-started-card input[type="email"],
+        .get-started-card textarea,
+        .get-started-card select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1em;
+        }
+
+        .get-started-card button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-started-card button:hover {
+            background-color: #246326;
+        }
+
+        /* --- Why Grow Garden Green Stands Out --- */
+        #why-stand-out .stand-out-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stand-out-point {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .stand-out-point h3 {
+            color: var(--primary-color);
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .stand-out-point p {
+            color: var(--dark-grey);
+            font-size: 0.95em;
+        }
+
+        /* --- Customer Satisfaction --- */
+        #customer-satisfaction {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        #customer-satisfaction h2 {
+            color: #fff;
+        }
+
+        .satisfaction-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .satisfaction-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            padding: 20px;
+            border: 2px solid rgba(255,255,255,0.7);
+            border-radius: 10px;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .satisfaction-item h3 {
+            color: var(--highlight-color);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .satisfaction-item p {
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        /* --- Disclaimer --- */
+        #disclaimer {
+            background-color: var(--light-grey);
+            padding: 50px 0;
+            text-align: left;
+            font-size: 0.9em;
+            color: var(--dark-grey);
+        }
+
+        #disclaimer h2 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        footer .footer-section h3 {
+            color: var(--highlight-color);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        footer .footer-section p,
+        footer .footer-section ul {
+            color: #ccc;
+            font-size: 0.95em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        footer .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-section ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.8em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: var(--highlight-color);
+        }
+
+        footer .copyright {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 3em;
+            }
+
+            .hero-ctas .btn {
+                display: block;
+                margin: 15px auto;
+            }
+
+            .process-steps, .portfolio-grid, .services-grid, .blog-posts, .get-started-content, .stand-out-points, .satisfaction-content {
+                grid-template-columns: 1fr;
+            }
+
+            .process-step, .portfolio-item, .service-card, .blog-post, .get-started-card, .stand-out-point, .satisfaction-item {
+                max-width: 100%;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer .footer-section {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Grow Garden Green 🌿</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+           
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Designing Your Lush Sanctuary.</h1>
+                <div class="hero-ctas">
+                    <a href="#portfolio" class="btn">📐 View Portfolio</a>
+                    <a href="#get-started" class="btn">🌱 Start Your Plan</a>
+                    <a href="#get-started" class="btn">🗓️ Book a Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section id="brand-essence" class="container">
+            <h2>Our Brand Essence: Cultivating Green Dreams</h2>
+            <p>At Grow Garden Green, we believe that every outdoor space holds the potential to become a vibrant, eco-friendly sanctuary. Our passion lies in transforming ordinary backyards, urban balconies, and sprawling estates into breathtaking natural havens that resonate with your personal style and contribute positively to the environment. We are more than just garden designers; we are landscape architects, horticulturalists, and sustainability advocates dedicated to crafting living works of art that flourish in every season. Our bespoke garden design service is built on a foundation of creativity, ecological responsibility, and unwavering professionalism. We meticulously blend innovative landscape architecture with sustainable planting practices and robust year-round maintenance plans, ensuring that your garden doesn't just look beautiful on day one, but thrives and evolves for years to come. We understand that a garden is a deeply personal space, a place for relaxation, entertainment, and connection with nature. That's why we commit to a collaborative design process, ensuring your vision is at the heart of every green masterpiece we create. From the initial conceptual sketches to the final blossoming plant, we are your partners in cultivating a truly lush sanctuary.</p>
+        </section>
+
+        ---
+
+        <section id="our-process" class="container">
+            <h2>Our Seamless Garden Design Process</h2>
+            <p>Embark on a transformative journey with Grow Garden Green as we meticulously guide you through every step of creating your dream outdoor space. Our process is designed to be transparent, collaborative, and deeply rewarding, ensuring that the final sanctuary perfectly aligns with your vision and lifestyle. We believe that a truly remarkable garden emerges from careful planning, thoughtful design, and expert execution. From the moment you first connect with us until your garden blossoms into its full glory, our dedicated team is committed to delivering excellence and a truly personalized experience. We understand that designing a garden can seem like a daunting task, which is why we've streamlined our approach to make it as enjoyable and stress-free as possible. Let's explore the key phases of our comprehensive process:</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <h3>Inspiration & Discovery</h3>
+                    <p>This is where your garden story begins. We start by truly listening to your aspirations, understanding your aesthetic preferences, and assessing the unique characteristics of your outdoor space. Our goal is to capture the essence of what you envision for your sanctuary.</p>
+                    <ul>
+                        <li>Virtual or in-person site visit to assess existing conditions, sunlight, soil, and drainage.</li>
+                        <li>Detailed consultation to discuss your lifestyle, needs, desired functions (e.g., entertaining, relaxation, play), and budget.</li>
+                        <li>"Your Garden Personality" style quiz to help us understand your aesthetic preferences (e.g., modern, rustic, formal, natural).</li>
+                        <li>Collection of inspirational images and ideas to establish a clear creative direction.</li>
+                        <li>Analysis of local climate, hardiness zones, and environmental factors.</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <h3>Concept & Blueprint</h3>
+                    <p>Once we have a deep understanding of your vision, our expert designers translate your ideas into tangible plans. This phase is all about bringing your dream garden to life on paper, with detailed proposals and creative visualizations.</p>
+                    <ul>
+                        <li>Creation of hand-drawn moodboards and concept sketches to explore design themes and elements.</li>
+                        <li>Development of detailed 2D blueprints and 3D renders, allowing you to visualize your future garden from every angle.</li>
+                        <li>Careful selection of plant palettes, considering seasonality, growth habits, color schemes, and drought tolerance.</li>
+                        <li>Proposal of hardscape materials (paving, decking, walls), lighting solutions, and other structural elements.</li>
+                        <li>Presentation of comprehensive design proposal for your review and feedback.</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <h3>Installation & Growth</h3>
+                    <p>With the blueprint finalized and approved, our skilled installation team meticulously brings the design to life. We pride ourselves on efficient, high-quality execution, transforming your space with precision and care, while prioritizing sustainable practices.</p>
+                    <ul>
+                        <li>Expert preparation of the site, including soil amendments and grading for optimal plant health.</li>
+                        <li>Installation of eco-smart irrigation systems designed for water conservation and plant efficiency.</li>
+                        <li>Careful planting of all selected flora, ensuring proper spacing and healthy establishment.</li>
+                        <li>Construction of hardscapes, decking, water features, and outdoor lighting with superior craftsmanship.</li>
+                        <li>Implementation of a seasonal planting schedule to ensure year-round interest and bloom.</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <h3>Ongoing Care</h3>
+                    <p>A garden is a living, evolving entity, and our commitment to its beauty doesn't end with installation. We offer comprehensive ongoing care plans to ensure your sanctuary continues to flourish and evolve, adapting to the seasons and growing more beautiful with time.</p>
+                    <ul>
+                        <li>Customized monthly and quarterly maintenance plans, including pruning, fertilization, pest management, and weeding.</li>
+                        <li>Seasonal color rotations and design refreshes to keep your garden vibrant and dynamic throughout the year.</li>
+                        <li>Expert advice and troubleshooting for any garden-related concerns or challenges.</li>
+                        <li>Optional winterizing services and spring clean-ups to prepare your garden for each season.</li>
+                        <li>Long-term strategic planning for mature gardens, including tree care and large-scale plant management.</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.1em;">Our process is designed for clarity and communication, ensuring you are informed and involved at every stage. We believe this collaborative approach is key to creating a garden that truly reflects your dreams and exceeds your expectations. From the initial spark of inspiration to the ongoing vibrancy of your thriving sanctuary, Grow Garden Green is your trusted partner.</p>
+        </section>
+
+        ---
+
+        <section id="portfolio" class="container">
+            <h2>Our Portfolio: Gardens That Inspire</h2>
+            <p>Explore a curated selection of our most cherished garden transformations. Our portfolio showcases the diverse range of styles and scales we work with, each project a testament to our commitment to innovative design, sustainable practices, and the unique visions of our clients. Dive into these examples and imagine the possibilities for your own outdoor space. Each garden tells a unique story, from intimate urban balconies to expansive estate landscapes, demonstrating our versatility and passion for creating distinct, flourishing environments. We believe in crafting gardens that are not only aesthetically pleasing but also functional, ecologically sound, and perfectly integrated with their surroundings. Witness the dramatic before-and-after transformations and read heartfelt testimonials from clients who now enjoy their very own Grow Garden Green sanctuary.</p>
+
+            <div class="filters">
+                <button class="active">All Styles</button>
+                <button>Modern Minimal</button>
+                <button>Cottage Charm</button>
+                <button>Tropical Oasis</button>
+                <button>Urban Green</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="p1.avif" alt="Modern Minimal Garden">
+                    <div class="content">
+                        <h3>The Zen Courtyard</h3>
+                        <p>A serene, minimalist design focusing on clean lines, contemplative spaces, and drought-tolerant succulents. Perfect for urban tranquility.</p>
+                        <p><strong>Style:</strong> Modern Minimal</p>
+                        <div class="client-testimonial">
+                            <p>"Grow Garden Green transformed our cramped backyard into a peaceful oasis. The design is so clean and functional, exactly what we wanted!"</p>
+                            <p class="author">- Sarah L., Bengaluru</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="p2.webp" alt="Cottage Charm Garden">
+                    <div class="content">
+                        <h3>The English Countryside Retreat</h3>
+                        <p>A riot of color and texture with classic cottage flowers, winding paths, and a charming seating area. A truly whimsical escape.</p>
+                        <p><strong>Style:</strong> Cottage Charm</p>
+                        <div class="client-testimonial">
+                            <p>"Our garden is now a dream! The team at Grow Garden Green perfectly captured the whimsical cottage feel we adore. Every bloom is a joy."</p>
+                            <p class="author">- David M., Gurugram</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="p3.webp" alt="Tropical Oasis Garden">
+                    <div class="content">
+                        <h3>The Bali-Inspired Escape</h3>
+                        <p>Lush, exotic foliage, cascading water features, and bamboo accents create a tranquil, tropical paradise right at home.</p>
+                        <p><strong>Style:</strong> Tropical Oasis</p>
+                        <div class="client-testimonial">
+                            <p>"We feel like we're on vacation every day! The tropical design is stunning, and the maintenance plan keeps it looking perfect."</p>
+                            <p class="author">- Priya S., Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="p4.webp" alt="Urban Green Garden">
+                    <div class="content">
+                        <h3>The Rooftop Edible Garden</h3>
+                        <p>Maximizing limited urban space with vertical gardens, raised beds for edibles, and a cozy seating nook. Sustainability in the city.</p>
+                        <p><strong>Style:</strong> Urban Green</p>
+                        <div class="client-testimonial">
+                            <p>"Who knew our tiny balcony could become such a productive green space? Grow Garden Green made it happen and we're so happy."</p>
+                            <p class="author">- Rohan V., Delhi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="p5.avif" alt="Estate Garden">
+                    <div class="content">
+                        <h3>The Grand Estate Revival</h3>
+                        <p>A comprehensive redesign of a sprawling estate garden, incorporating formal elements, native woodlands, and expansive perennial borders. </p>
+                        <p><strong>Style:</strong> Formal/Estate</p>
+                        <div class="client-testimonial">
+                            <p>"Grow Garden Green undertook the monumental task of revamping our estate gardens, and the results are simply magnificent. Their vision and execution were flawless, creating a timeless landscape that we will cherish for generations."</p>
+                            <p class="author">- Mr. & Mrs. Sharma, Jaipur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="p6.avif" alt="Water-Efficient Garden">
+                    <div class="content">
+                        <h3>The Xeriscape Oasis</h3>
+                        <p>Designed for beauty and sustainability, this garden minimizes water usage through thoughtful plant selection and efficient irrigation. </p>
+                        <p><strong>Style:</strong> Sustainable/Xeriscape</p>
+                        <div class="client-testimonial">
+                            <p>"We were looking for a beautiful garden that was also responsible with water. Grow Garden Green delivered beyond our expectations. It’s stunning and so eco-friendly!"</p>
+                            <p class="author">- Anita R., Pune</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="p7.avif" alt="Family-Friendly Garden">
+                    <div class="content">
+                        <h3>The Family Play & Relax Zone</h3>
+                        <p>A multi-functional garden designed with both children and adults in mind. Features a safe play area, a comfortable lounge space, and easy-to-maintain planting beds. Safety and durability were paramount in this design, with non-toxic plants and soft-fall surfaces in designated play zones. We incorporated a custom-built treehouse, a durable turf area for games, and an inviting fire pit area for evening gatherings. Edible plants like berry bushes and small fruit trees were included, encouraging children to connect with nature and understand where their food comes from. The design ensures clear sightlines for parental supervision while still offering distinct zones for various activities. This garden serves as a vibrant hub for family life, fostering outdoor activity and creating lasting memories.</p>
+                        <p><strong>Style:</strong> Family-Friendly</p>
+                        <div class="client-testimonial">
+                            <p>"Our kids absolutely love the new garden, and so do we! It's perfectly designed for both play and relaxation. Grow Garden Green truly understood our family's needs."</p>
+                            <p class="author">- The Gupta Family, Chennai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="p8.avif" alt="Small Space Garden">
+                    <div class="content">
+                        <h3>The Compact Balcony Blooms</h3>
+                        <p>Transforming a small apartment balcony into a vibrant, vertical garden sanctuary. Utilizing smart planters, climbing plants, and space-saving furniture to create an inviting outdoor room. This project proves that even the smallest spaces can have a big impact. We maximized verticality with living walls and tiered planters, creating an illusion of greater depth. Lightweight, weather-resistant materials were chosen to suit the structural limitations of a balcony. Integrated mood lighting and a compact water feature enhance the ambiance, turning a previously unused space into a tranquil retreat. The plant selection focused on low-maintenance, high-impact varieties that thrive in container environments. This balcony now offers a refreshing escape and a splash of nature in the heart of the city.</p>
+                        <p><strong>Style:</strong> Small Space/Balcony</p>
+                        <div class="client-testimonial">
+                            <p>"Our balcony used to be just a concrete slab. Now it's a beautiful mini-garden! Grow Garden Green worked wonders with the limited space."</p>
+                            <p class="author">- Anya K., Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.1em;">These are just a few examples of the diverse and inspiring projects we have had the privilege to create. We are passionate about bringing unique garden dreams to life, no matter the size or style. Your vision is our canvas, and the possibilities are truly endless.</p>
+        </section>
+
+        ---
+
+        <section id="services" class="container">
+            <h2>Our Comprehensive Garden Services</h2>
+            <p>At Grow Garden Green, we offer a full spectrum of services designed to cover every aspect of your garden's journey, from initial concept to ongoing vitality. Our expertise ensures that every detail is handled with precision, care, and a commitment to sustainability. We understand that each client has unique needs, which is why our services are highly customizable and can be bundled to provide a truly seamless experience. Whether you're starting from scratch, looking to enhance an existing space, or simply need expert care to keep your garden thriving, we have the solutions. Our team comprises seasoned professionals, from landscape architects to certified horticulturists, all dedicated to delivering exceptional results that exceed your expectations. Here's a detailed look at what we offer:</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Custom Garden Design</h3>
+                    <p>Unlock the full potential of your outdoor space with a tailor-made garden design that reflects your unique style and needs. Our design process is deeply collaborative, ensuring every element, from plant selection to structural features, aligns with your vision. We create detailed blueprints, 3D renderings, and mood boards that help you visualize your future sanctuary. This includes:</p>
+                    <ul>
+                        <li>Personalized consultations and site analysis.</li>
+                        <li>Conceptual design development and mood board creation.</li>
+                        <li>Detailed master plans and planting schemes.</li>
+                        <li>3D visualization and walk-throughs for a realistic preview.</li>
+                        <li>Material selection guidance (paving, decking, walling).</li>
+                        <li>Consideration of natural light, drainage, and existing features.</li>
+                        <li>Integration of sustainable design principles.</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Complete Installation</h3>
+                    <p>From the ground up, our skilled team handles every aspect of bringing your garden design to life. We ensure a seamless, efficient, and high-quality installation, managing all components from earthworks to the final decorative touches. Our experienced contractors adhere to the highest industry standards, ensuring durability and aesthetic appeal. Services include:</p>
+                    <ul>
+                        <li>Professional site preparation and grading.</li>
+                        <li>Installation of all softscapes (plants, trees, shrubs, turf).</li>
+                        <li>Construction of hardscapes (patios, pathways, driveways).</li>
+                        <li>Building of decks, pergolas, gazebos, and other structures.</li>
+                        <li>Integration of outdoor lighting systems (ambient, task, accent).</li>
+                        <li>Installation of water features (ponds, fountains, streams).</li>
+                        <li>Efficient project management and timely completion.</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Sustainable Upgrades</h3>
+                    <p>Enhance your garden's ecological footprint and reduce its environmental impact with our specialized sustainable upgrade services. We help you implement eco-smart solutions that conserve resources and promote biodiversity, creating a truly green sanctuary. These upgrades not only benefit the environment but also often lead to reduced maintenance and utility costs. Our sustainable solutions include:</p>
+                    <ul>
+                        <li>Rainwater harvesting systems for irrigation.</li>
+                        <li>Installation of native plant beds to support local ecosystems.</li>
+                        <li>Composting solutions and organic waste management.</li>
+                        <li>Drought-tolerant landscaping and xeriscaping principles.</li>
+                        <li>Pollinator-friendly garden design and insect hotels.</li>
+                        <li>Smart irrigation systems with weather sensors.</li>
+                        <li>Soil enrichment programs for healthier plant growth.</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Maintenance Plans</h3>
+                    <p>Ensure your garden remains vibrant and healthy year-round with our comprehensive maintenance plans. From routine care to seasonal overhauls, our expert horticulturists keep your plants thriving and your landscape pristine. We offer flexible plans tailored to your garden's specific needs and your preferred frequency of visits. Our services include:</p>
+                    <ul>
+                        <li>Regular pruning, trimming, and shaping of plants and hedges.</li>
+                        <li>Weed control and pest management using eco-friendly methods.</li>
+                        <li>Seasonal fertilization and soil health monitoring.</li>
+                        <li>Irrigation system checks and adjustments.</li>
+                        <li>Leaf removal and garden debris clean-up.</li>
+                        <li>Seasonal planting updates for continuous color and interest.</li>
+                        <li>Horticultural consulting and plant health assessments.</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Outdoor Living Spaces</h3>
+                    <p>Extend your home into the garden with beautifully designed and integrated outdoor living spaces. We create functional and inviting areas for dining, lounging, entertaining, and relaxation, seamlessly blending them with the surrounding landscape. From cozy fire pits to fully equipped outdoor kitchens, we design spaces that enhance your lifestyle and increase your property's value. Our offerings include:</p>
+                    <ul>
+                        <li>Design and installation of custom patios and decks.</li>
+                        <li>Creation of outdoor kitchens and dining areas.</li>
+                        <li>Building of fire pits and outdoor fireplaces.</li>
+                        <li>Installation of pergolas, arbors, and shade structures.</li>
+                        <li>Selection and placement of outdoor furniture and decor.</li>
+                        <li>Integration of outdoor sound systems and entertainment.</li>
+                        <li>Privacy solutions like screens and strategic planting.</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Garden Lighting Design & Installation</h3>
+                    <p>Illuminate your garden and extend its usability into the evening hours with our expert lighting design and installation services. We create captivating nightscapes that highlight architectural features, pathways, and plants, enhancing both beauty and safety. From subtle accent lighting to functional pathway illumination, we use energy-efficient LED solutions. Our lighting services include:</p>
+                    <ul>
+                        <li>Strategic placement for ambiance and security.</li>
+                        <li>Highlighting focal points, trees, and water features.</li>
+                        <li>Pathway and step lighting for safe navigation.</li>
+                        <li>Energy-efficient LED lighting solutions.</li>
+                        <li>Smart lighting systems with timers and dimmers.</li>
+                        <li>Repair and maintenance of existing lighting.</li>
+                        <li>Custom fixture selection to match your garden's style.</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.1em;">Whether you need a single service or a complete end-to-end solution, Grow Garden Green is dedicated to delivering superior results. Contact us today to discuss how we can bring your outdoor dreams to life and keep them flourishing.</p>
+        </section>
+
+        ---
+
+        <section id="inspiration-blog" class="container">
+            <h2>Our Inspiration Blog: Grow Your Green Thumb</h2>
+            <p>Dive into our blog for expert tips, creative ideas, and sustainable gardening insights. Whether you're a seasoned gardener or just starting your green journey, our articles are designed to inspire and empower you to cultivate your own beautiful spaces. We believe that knowledge sharing is key to fostering a greener community, and our blog is a resource for anyone looking to deepen their understanding of horticulture and landscape design. From practical guides on plant care to innovative ideas for urban gardening, we cover a wide range of topics to help you make the most of your outdoor environment. Let's grow together!</p>
+
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <h3>5 Low-Water Plants for a Drought-Tolerant Garden</h3>
+                    <p>Discover beautiful and resilient plants that thrive with minimal water, perfect for creating an eco-conscious garden that looks stunning year-round. This article delves into specific species like Lavender, Sedum, and various succulents, offering detailed care instructions and aesthetic considerations for each. We also provide tips on soil preparation and efficient watering techniques to maximize their drought resistance. Learn how to design a vibrant, low-maintenance landscape that conserves precious water resources without compromising on beauty. Embrace the beauty of xeriscaping and reduce your ecological footprint.</p>
+                    <a href="#">Read More &rarr;</a>
+                </div>
+                <div class="blog-post">
+                    <h3>How to Create a Pollinator-Friendly Haven</h3>
+                    <p>Learn how to design a garden that attracts bees, butterflies, and other vital pollinators, contributing to biodiversity and a healthier ecosystem. This guide covers the best nectar and pollen-rich plants, ideal garden layouts for pollinators, and how to create essential habitats like bee hotels and shallow water sources. We discuss the importance of native plant species and how avoiding pesticides can significantly boost your garden's appeal to these crucial creatures. Transform your garden into a buzzing, fluttering sanctuary that supports local wildlife and enhances ecological balance.</p>
+                    <a href="#">Read More &rarr;</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Turning a Tiny Balcony into a Green Escape</h3>
+                    <p>Don't let limited space limit your gardening dreams! Explore creative vertical gardening solutions, clever container ideas, and space-saving layouts for urban dwellers. This article provides practical tips for maximizing every inch of your balcony, from selecting the right lightweight planters to choosing plants that thrive in confined spaces. We offer innovative ideas for living walls, hanging baskets, and compact edible gardens, demonstrating how to create a lush, tranquil retreat in even the smallest urban environment. Discover how a few smart design choices can transform a neglected balcony into a vibrant, personal sanctuary.</p>
+                    <a href="#">Read More &rarr;</a>
+                </div>
+                <div class="blog-post">
+                    <h3>The Art of Composting: Enriching Your Garden Sustainably</h3>
+                    <p>Unlock the secrets to creating nutrient-rich compost right in your backyard. This comprehensive guide covers everything from choosing the right composting method for your space (bins, piles, vermicomposting) to understanding the perfect "greens" and "browns" ratio. Learn how composting reduces waste, improves soil structure, and provides a free, organic fertilizer for your plants. We address common composting myths and troubleshooting tips, making it easy for beginners to start their composting journey and for experienced gardeners to refine their techniques. Transform kitchen scraps and yard waste into black gold for a healthier, more vibrant garden.</p>
+                    <a href="#">Read More &rarr;</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Choosing the Right Trees for Your Landscape: A Guide</h3>
+                    <p>Selecting the perfect tree can elevate your garden's design and provide numerous environmental benefits. This article walks you through the essential considerations, including climate compatibility, mature size, root systems, and aesthetic appeal. We discuss various tree types suitable for different purposes – shade, privacy, ornamental value, and fruit production. Learn about native tree species that thrive in your region and contribute to local ecosystems. This guide also covers proper planting techniques and early care to ensure your trees establish strong, healthy foundations for long-term growth and enjoyment.</p>
+                    <a href="#">Read More &rarr;</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Designing with Hardscapes: Patios, Paths, and Pergolas</h3>
+                    <p>Beyond plants, hardscapes are the bones of your garden design, defining spaces and adding functionality. This post explores how to effectively use materials like stone, concrete, wood, and pavers to create stunning patios, inviting pathways, and impactful retaining walls. We provide insights into choosing materials that complement your home's architecture and withstand local weather conditions. Discover how pergolas and arbors can add vertical interest and define outdoor rooms, offering shade and a framework for climbing plants. Learn to integrate these structural elements seamlessly for a cohesive and beautifully structured outdoor living area.</p>
+                    <a href="#">Read More &rarr;</a>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.1em;">Our blog is constantly updated with fresh content to keep you informed and inspired. Subscribe to our newsletter to receive the latest articles directly in your inbox and never miss a valuable tip for cultivating your green sanctuary.</p>
+        </section>
+
+        ---
+
+        <section id="get-started" class="container">
+            <h2>Ready to Grow Your Garden Green?</h2>
+            <p>Start your journey towards a breathtaking outdoor sanctuary today. Whether you're ready for a full garden transformation or just exploring possibilities, our team is here to guide you. We offer multiple ways to connect and get your project moving forward, ensuring a seamless and enjoyable experience from the very first step. We understand that every project is unique, and we are committed to providing personalized solutions that cater to your specific desires, budget, and timeline. Don't hesitate to reach out; your dream garden is closer than you think.</p>
+
+            <div class="get-started-content">
+                <div class="get-started-card">
+                    <h3>Interactive Quote Tool (Coming Soon!)</h3>
+                    <p>While our full interactive tool is under development, you can still get a preliminary understanding of your project's scope. Tell us about your vision, and we'll provide an estimated range.</p>
+                    <form action="#" method="POST">
+                        <label for="garden-size">Estimated Garden Size (sq ft):</label>
+                        <input type="text" id="garden-size" name="garden_size" placeholder="e.g., 500, 2000" required>
+
+                        <label for="garden-style">Preferred Garden Style:</label>
+                        <select id="garden-style" name="garden_style" required>
+                            <option value="">Select a style</option>
+                            <option value="modern-minimal">Modern Minimal</option>
+                            <option value="cottage-charm">Cottage Charm</option>
+                            <option value="tropical-oasis">Tropical Oasis</option>
+                            <option value="urban-green">Urban Green</option>
+                            <option value="formal-estate">Formal/Estate</option>
+                            <option value="sustainable-xeriscape">Sustainable/Xeriscape</option>
+                            <option value="family-friendly">Family-Friendly</option>
+                            <option value="other">Other (Please specify)</option>
+                        </select>
+
+                        <label for="budget-range">Estimated Budget Range (INR):</label>
+                        <select id="budget-range" name="budget_range" required>
+                            <option value="">Select a range</option>
+                            <option value="50k-1L">₹50,000 - ₹1,00,000</option>
+                            <option value="1L-3L">₹1,00,000 - ₹3,00,000</option>
+                            <option value="3L-5L">₹3,00,000 - ₹5,00,000</option>
+                            <option value="5L+">₹5,00,000+</option>
+                        </select>
+                        <p style="font-size: 0.9em; color: var(--dark-grey);"><em>Note: This is an estimated range. A detailed quote will be provided after a consultation.</em></p>
+                        <button type="submit">Get Estimate</button>
+                    </form>
+                </div>
+
+                <div class="get-started-card">
+                    <h3>Book a Free 15-Min Consultation</h3>
+                    <p>Let's chat about your project! Schedule a complimentary 15-minute call with one of our design specialists to discuss your ideas and learn how we can help.</p>
+                    <form action="#" method="POST">
+                        <label for="contact-name">Your Name:</label>
+                        <input type="text" id="contact-name" name="contact_name" required>
+
+                        <label for="contact-email">Your Email:</label>
+                        <input type="email" id="contact-email" name="contact_email" required>
+
+                        <label for="contact-phone">Your Phone (Optional):</label>
+                        <input type="text" id="contact-phone" name="contact_phone">
+
+                        <label for="message">Tell Us About Your Project:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Briefly describe your garden dreams..."></textarea>
+
+                        <p style="font-size: 0.9em; color: var(--dark-grey);"><em>You'll receive a link to our calendar to select a suitable time after submitting this form.</em></p>
+                        <button type="submit">Request Consultation</button>
+                    </form>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.1em;">We look forward to connecting with you and beginning the exciting journey of designing your lush sanctuary. Your dream garden is just a click or a call away!</p>
+        </section>
+
+        ---
+
+        <section id="why-stand-out" class="container">
+            <h2>Why Grow Garden Green Stands Out</h2>
+            <p>In a world where outdoor spaces are increasingly valued for their beauty and ecological role, Grow Garden Green distinguishes itself through a unique blend of creativity, sustainability, and client-centric service. We don't just design gardens; we cultivate experiences, foster biodiversity, and build lasting relationships. Our approach is holistic, considering not only the aesthetic appeal but also the long-term health and environmental impact of every project. We are committed to pushing the boundaries of landscape design, integrating innovative solutions with timeless principles to create truly extraordinary outdoor environments. Discover what makes us the preferred choice for discerning homeowners and property managers seeking excellence in garden design and care.</p>
+            <div class="stand-out-points">
+                <div class="stand-out-point">
+                    <h3>Design + Ecology in Perfect Harmony</h3>
+                    <p>We are pioneers in merging exquisite landscape architecture with profound ecological principles. Our designs aren't just visually stunning; they are living ecosystems, fostering biodiversity, conserving water, and thriving naturally. We carefully select native plants, implement smart irrigation, and design for long-term environmental health, ensuring your garden is a beacon of sustainability.</p>
+                </div>
+                <div class="stand-out-point">
+                    <h3>Fully Transparent Process</h3>
+                    <p>From the initial sketch to the final bloom, you're always in the loop. Our transparent process includes detailed proposals, clear timelines, and real-time progress tracking, ensuring no surprises and complete peace of mind throughout your project's duration. We believe in open communication at every stage.</p>
+                </div>
+                <div class="stand-out-point">
+                    <h3>Custom-Tailored Solutions</h3>
+                    <p>Whether it's a cozy container garden for a tiny balcony or a sprawling landscape for a grand estate, our solutions are meticulously customized to fit your unique space, preferences, and budget. We celebrate individuality, ensuring your garden is a true reflection of your personality and needs.</p>
+                </div>
+                <div class="stand-out-point">
+                    <h3>Seasonal Support & Vibrancy</h3>
+                    <p>Our commitment extends beyond installation. With our comprehensive maintenance plans and seasonal support, your garden receives expert care year-round, ensuring it consistently looks its best and never loses its initial glow or vitality, adapting beautifully with each changing season.</p>
+                </div>
+                <div class="stand-out-point">
+                    <h3>Community & DIY Empowerment</h3>
+                    <p>We believe in sharing the joy of gardening. Through community workshops and virtual tutorials, we empower DIY enthusiasts with the knowledge and skills to nurture their own green spaces, fostering a broader appreciation for sustainable gardening practices and environmental stewardship.</p>
+                </div>
+                <div class="stand-out-point">
+                    <h3>Innovative Technology Integration</h3>
+                    <p>We leverage cutting-edge tools, including virtual garden planners, eco-score widgets, and before-after simulators (features we are actively developing), to provide an immersive and informed design experience, allowing you to visualize and optimize your garden before it comes to life.</p>
+                </div>
+                <div class="stand-out-point">
+                    <h3>Dedicated & Passionate Team</h3>
+                    <p>Our team comprises highly skilled and passionate landscape architects, horticulturalists, and project managers who are genuinely dedicated to creating exceptional outdoor spaces. We bring a blend of artistic vision, technical expertise, and a deep love for nature to every project.</p>
+                </div>
+                <div class="stand-out-point">
+                    <h3>Long-Term Value & ROI</h3>
+                    <p>A Grow Garden Green landscape is an investment that yields both aesthetic pleasure and tangible value. Our sustainable designs are crafted for longevity, requiring less water and maintenance over time, thus contributing to increased property value and reduced running costs.</p>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.1em;">Choose Grow Garden Green for a partner who is as committed to your garden's beauty and health as you are. Let us transform your outdoor space into a thriving, sustainable, and utterly captivating sanctuary.</p>
+        </section>
+
+        ---
+
+        <section id="customer-satisfaction">
+            <div class="container">
+                <h2>Our Commitment to Customer Satisfaction</h2>
+                <p>At Grow Garden Green, the satisfaction of our clients is the cornerstone of our business. We are immensely proud of the relationships we build and the positive impact our gardens have on the lives of those who inhabit them. Our success is directly tied to your delight, and we go above and beyond to ensure every project not only meets but exceeds your expectations. We believe that a truly successful garden is one that brings joy, tranquility, and lasting beauty to its owners. Our dedicated team is committed to open communication, meticulous attention to detail, and delivering results that stand the test of time.</p>
+                <div class="satisfaction-content">
+                    <div class="satisfaction-item">
+                        <h3>98%</h3>
+                        <p>Client Satisfaction Rate (Based on post-project surveys)</p>
+                    </div>
+                    <div class="satisfaction-item">
+                        <h3>95%</h3>
+                        <p>Projects Delivered On Time & On Budget</p>
+                    </div>
+                    <div class="satisfaction-item">
+                        <h3>100+</h3>
+                        <p>Happy Gardens Transformed Annually</p>
+                    </div>
+                    <div class="satisfaction-item">
+                        <h3>5-Star</h3>
+                        <p>Average Rating Across All Platforms</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; font-size: 1.1em;">These metrics reflect our unwavering dedication to quality, efficiency, and client happiness. We invite you to experience the Grow Garden Green difference and discover why our clients consistently recommend us for their garden design and maintenance needs. Your satisfaction is not just a goal; it's our promise.</p>
+            </div>
+        </section>
+
+        ---
+
+        <section id="disclaimer" class="container">
+            <h2>Disclaimer</h2>
+            <p>Welcome to Grow Garden Green. Please read this disclaimer carefully before using our website or engaging with our services. By accessing or using any part of this site or our services, you agree to be bound by the terms and conditions outlined herein. If you do not agree to these terms, please refrain from using our website or services.</p>
+
+            <h3>Information Accuracy:</h3>
+            <p>The content provided on the Grow Garden Green website (growgardengreen.com) is for general informational and illustrative purposes only. While we strive to ensure the accuracy, completeness, and timeliness of the information presented, we make no warranties or representations of any kind, express or implied, about the reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk. Garden design is an artistic and technical field; concepts and visual representations (including images, 3D renders, and project examples) are illustrative and may vary based on specific site conditions, climate, material availability, and client preferences.</p>
+
+            <h3>Estimates and Quotes:</h3>
+            <p>Any estimates or preliminary budget ranges provided through our website (e.g., via the "Interactive Quote Tool" if implemented) are indicative only and based on generalized inputs. They do not constitute a binding offer or a final quote. A comprehensive and accurate quotation for our garden design, installation, or maintenance services will only be provided after a detailed consultation, site visit, and thorough assessment of your specific project requirements, scope, materials, labor, and local conditions. Prices are subject to change without prior notice and may vary based on market fluctuations of materials and labor costs.</p>
+
+            <h3>Third-Party Links:</h3>
+            <p>Our website may contain links to third-party websites or services that are not owned or controlled by Grow Garden Green. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. You acknowledge and agree that Grow Garden Green shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
+
+            <h3>Intellectual Property:</h3>
+            <p>All content on this website, including but not limited to text, graphics, logos, images, videos, software, and design concepts, is the property of Grow Garden Green or its content suppliers and is protected by international copyright laws. Unauthorized reproduction or distribution of any content is strictly prohibited. The design concepts and portfolio images shared are examples of our work and remain the intellectual property of Grow Garden Green and our clients, where applicable. Use of our visual identity elements (colors, fonts, iconography) for purposes other than personal viewing on this website is prohibited without explicit written consent.</p>
+
+            <h3>Limitation of Liability:</h3>
+            <p>To the fullest extent permitted by applicable law, Grow Garden Green, its directors, employees, partners, agents, suppliers, or affiliates, shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the website; (ii) any conduct or content of any third party on the website; (iii) any content obtained from the website; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+
+            <h3>Changes to Disclaimer:</h3>
+            <p>Grow Garden Green reserves the right to modify or update this disclaimer at any time without prior notice. Your continued use of the website and our services after any such changes constitutes your acceptance of the new disclaimer. We encourage you to review this page periodically for any updates. The effective date of the current disclaimer will be noted at the bottom of the page.</p>
+
+            <p>By engaging with Grow Garden Green, you acknowledge that you have read, understood, and agreed to this disclaimer. For any questions or concerns regarding these terms, please contact us directly.</p>
+            <p style="margin-top: 20px;"><em>Last Updated: July 8, 2025</em></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Grow Garden Green</h3>
+                <p>Transforming outdoor spaces into vibrant, eco-friendly sanctuaries with creative landscape architecture, sustainable planting, and year-round maintenance.</p>
+                <div class="social-links" style="margin-top: 20px;">
+                    <a href="https://facebook.com/growgardengreen" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/growgardengreen" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com/growgardengreen" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://linkedin.com/company/growgardengreen" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#our-process">Our Process</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#inspiration-blog">Blog</a></li>
+                    <li><a href="index.html#get-started">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li> </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong><br>
+                Grow Garden Green Headquarters<br>
+                123 Green Avenue, Garden City,<br>
+                Gurugram, Haryana 122001, India</p>
+                <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@growgardengreen.com">info@growgardengreen.com</a></p>
+                <p><strong>Business Hours:</strong><br>
+                Mon - Sat: 9:00 AM - 6:00 PM IST</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Grow Garden Green. All rights reserved. Crafting lush sanctuaries, one garden at a time. Designed with passion, built for nature.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Placeholder for future interactive features (e.g., filtering portfolio)
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('#portfolio .filters button');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    // Add logic here to filter portfolio items based on button.textContent
+                    console.log('Filtering by:', button.textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

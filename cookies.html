@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Grow Garden Green</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E7D32; /* Forest Green */
+            --accent-color: #A5D6A7;   /* Soft Moss */
+            --highlight-color: #FFEB3B; /* Sunshine Yellow */
+            --text-color: #333;
+            --light-grey: #f4f4f4;
+            --dark-grey: #666;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 2.8em; }
+        h2 { font-size: 2.2em; }
+        h3 { font-size: 1.8em; }
+        h4 { font-size: 1.4em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 40px; /* Consistent with other pages */
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* --- Main Content Area --- */
+        .cookie-content {
+            padding: 60px 0;
+            text-align: left;
+        }
+
+        .cookie-content h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cookie-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+
+        .cookie-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--dark-grey);
+        }
+
+        .cookie-content p {
+            margin-bottom: 1em;
+            font-size: 1em;
+            color: var(--text-color);
+        }
+
+        .cookie-content ul {
+            list-style: disc;
+            margin-left: 25px;
+            margin-bottom: 1em;
+        }
+
+        .cookie-content ol {
+            list-style: decimal;
+            margin-left: 25px;
+            margin-bottom: 1em;
+        }
+
+        .cookie-content li {
+            margin-bottom: 0.5em;
+        }
+
+        .cookie-content strong {
+            color: var(--primary-color);
+        }
+
+        /* --- Contact Points Section --- */
+        .contact-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .contact-point-card {
+            background-color: var(--light-grey);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .contact-point-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .contact-point-card p {
+            font-size: 0.95em;
+            color: var(--dark-grey);
+        }
+
+        /* --- Cookie Consent Dialogue --- */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(46, 125, 50, 0.95); /* Primary color with transparency */
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transform: translateY(100%); /* Start hidden */
+            transition: transform 0.5s ease-out;
+        }
+
+        .cookie-consent-banner.show {
+            transform: translateY(0);
+        }
+
+        .cookie-consent-banner p {
+            margin: 0;
+            flex: 1;
+            font-size: 1em;
+            line-height: 1.4;
+            color: #fff;
+            padding-right: 20px;
+        }
+
+        .cookie-consent-banner p a {
+            color: var(--highlight-color);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .cookie-consent-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px; /* For mobile stacking */
+        }
+
+        .cookie-consent-buttons button {
+            background-color: var(--highlight-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cookie-consent-buttons button:hover {
+            background-color: #FFD700;
+            transform: translateY(-2px);
+        }
+
+        .cookie-consent-buttons button.decline {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .cookie-consent-buttons button.decline:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: left;
+        }
+
+        footer .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        footer .footer-section h3 {
+            color: var(--highlight-color);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        footer .footer-section p,
+        footer .footer-section ul {
+            color: #ccc;
+            font-size: 0.95em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        footer .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-section ul li a:hover {
+            color: var(--highlight-color);
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.8em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: var(--highlight-color);
+        }
+
+        footer .copyright {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .container {
+                padding: 20px; /* Revert to original padding on smaller screens for better content fit */
+            }
+
+            .cookie-consent-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 20px;
+            }
+
+            .cookie-consent-banner p {
+                padding-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .cookie-consent-buttons {
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .cookie-consent-buttons button {
+                flex: 1;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Grow Garden Green 🌿</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cookie-content container">
+        <h1>Cookie Policy for Grow Garden Green</h1>
+        <p><strong>Last Updated: July 8, 2025</strong></p>
+
+        <p>Welcome to the Cookie Policy of Grow Garden Green. This document explains how we use cookies and similar technologies on our website, growgardengreen.com, and the choices you have regarding their use. We believe in transparency and want you to be fully informed about how your online activity is handled when you visit our Site. This policy is designed to provide you with a clear understanding of what cookies are, why we use them, and how you can manage your preferences. By continuing to browse and use our website, you are consenting to our use of cookies in accordance with this policy. If you do not agree with our use of cookies, you should adjust your browser settings accordingly or refrain from using our Site. We are committed to protecting your privacy and ensuring a secure and efficient browsing experience.</p>
+        <p>Our digital presence, much like our physical garden designs, is meticulously crafted to be both beautiful and functional. Cookies play a role in enhancing this functionality, allowing us to deliver a personalized and seamless user experience. This policy is an extension of our commitment to transparency, providing detailed insights into the mechanisms that enable certain features of our Site. We regularly review our cookie practices to ensure compliance with evolving privacy regulations and industry best practices, always prioritizing your data privacy and control.</p>
+
+        <h2>1. What are Cookies?</h2>
+        <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the owners of the site. Cookies enable a website to "remember" you, either for the duration of your visit (using a "session cookie") or for repeat visits (using a "persistent cookie").</p>
+        <p>They serve various purposes, such as remembering your preferences, tracking your browsing behavior, and enabling certain functionalities. For instance, cookies can keep you logged in to a service, remember items in a shopping cart, or help a website load faster by caching certain elements. They are essentially a website's short-term memory, allowing it to recognize your device and tailor the experience based on past interactions.</p>
+        <p>Cookies are not programs and do not contain malicious code or viruses. They are simply data files that are read by your web browser. Each cookie is unique to your web browser and contains anonymous information such as a unique identifier, the site name, and some digits and numbers. This allows a website to remember your preferences or what's in your shopping basket.</p>
+        <p>The information stored in cookies can be directly read by the website that placed them (first-party cookies) or by third-party services (third-party cookies) that are integrated into the website. Understanding this distinction is key to managing your privacy online.</p>
+
+        <h2>2. How We Use Cookies</h2>
+        <p>Grow Garden Green uses cookies for several purposes, primarily to enhance your user experience, analyze website performance, and support our marketing efforts. Our use of cookies is always aimed at improving our services and providing you with a more relevant and efficient browsing experience.</p>
+        <ul>
+            <li><strong>Essential Website Functionality:</strong> Some cookies are crucial for the basic operation of our website. They enable core functionalities like page navigation, accessing secure areas of the website, and remembering your cookie consent preferences. Without these cookies, the website may not function correctly.</li>
+            <li><strong>Website Performance and Analytics:</strong> We use cookies to collect information about how visitors use our website, such as which pages are visited most often, how long users spend on the site, and if they encounter any error messages. This data helps us understand user behavior, identify areas for improvement, and optimize our website's performance and content.</li>
+            <li><strong>Personalization:</strong> Cookies help us remember your preferences and settings, such as language choices or regional content display, to provide a more personalized and convenient experience during your visits.</li>
+            <li><strong>Marketing and Advertising:</strong> We may use cookies to deliver advertisements that are more relevant to you and your interests. They are also used to limit the number of times you see an advertisement and help measure the effectiveness of advertising campaigns. These cookies may remember that you have visited our website and may share this information with other organizations, such as advertisers.</li>
+            <li><strong>Security:</strong> Cookies can play a role in enhancing the security of our website by helping us detect and prevent malicious activities, such as fraudulent logins or cyberattacks.</li>
+            <li><strong>Customer Support:</strong> In some cases, cookies may be used to facilitate customer support features, such as remembering your chat history or preferences for interacting with our support team.</li>
+        </ul>
+        <p>Our aim is to use cookies responsibly and in a way that benefits your experience on our Site. We do not use cookies to collect personally identifiable information unless explicitly stated and with your consent.</p>
+
+        <h2>3. Types of Cookies We Use</h2>
+        <p>We categorize the cookies used on our Site to help you understand their purpose and manage your preferences. The types of cookies we use include:</p>
+
+        <h3>3.1. Strictly Necessary Cookies</h3>
+        <p>These cookies are essential for the website to function properly and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. Without these cookies, certain services you have asked for, like accessing secure areas or remembering your cookie consent, cannot be provided. These cookies do not store any personally identifiable information.</p>
+        <p>Examples of strictly necessary cookies include those that:</p>
+        <ul>
+            <li>Remember your cookie consent choices.</li>
+            <li>Allow you to navigate between pages efficiently.</li>
+            <li>Enable shopping cart functionalities (if applicable in the future).</li>
+            <li>Provide security features, such as protecting against cross-site request forgery.</li>
+            <li>Facilitate user login and authentication.</li>
+        </ul>
+        <p>You can set your browser to block or alert you about these cookies, but some parts of the site will not work. These cookies do not require your explicit consent as they are fundamental to the operation of the website.</p>
+
+        <h3>3.2. Performance and Analytics Cookies</h3>
+        <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies, we will not know when you have visited our site and will not be able to monitor its performance.</p>
+        <p>Examples of performance and analytics cookies include those from:</p>
+        <ul>
+            <li><strong>Google Analytics:</strong> Used to track website traffic, user behavior, and site performance. This helps us understand how users interact with our content, identify popular sections, and optimize our website for a better user experience. Google Analytics data is typically anonymized and aggregated.</li>
+            <li><strong>Other Analytics Tools:</strong> We may use other third-party analytics tools to gather similar data, helping us gain deeper insights into user engagement and site effectiveness.</li>
+        </ul>
+        <p>These cookies help us make data-driven decisions to enhance the functionality and content of Grow Garden Green, ensuring we provide the most relevant and engaging experience for our visitors.</p>
+
+        <h3>3.3. Functionality Cookies</h3>
+        <p>These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages. For example, they can remember your username, language preferences, or region. If you do not allow these cookies, then some or all of these services may not function properly.</p>
+        <p>Examples of functionality cookies include those that:</p>
+        <ul>
+            <li>Remember your preferred language settings.</li>
+            <li>Recall your login details for future visits (if a login system is implemented).</li>
+            <li>Provide enhanced, more personal features, such as remembering your preferences for certain content types.</li>
+            <li>Enable video playback on the site.</li>
+            <li>Support interactive elements like quizzes or forms where your previous inputs might be remembered.</li>
+        </ul>
+        <p>These cookies aim to make your browsing experience more convenient and tailored to your individual needs.</p>
+
+        <h3>3.4. Targeting and Advertising Cookies</h3>
+        <p>These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p>
+        <p>Examples of targeting and advertising cookies include those from:</p>
+        <ul>
+            <li><strong>Social Media Platforms:</strong> Cookies set by platforms like Facebook, Instagram, or Pinterest to track your activity across websites and build a profile for targeted advertising.</li>
+            <li><strong>Google Ads / AdSense:</strong> Used to deliver personalized advertisements based on your browsing history and interests.</li>
+            <li><strong>Retargeting Cookies:</strong> These cookies help us show you ads for Grow Garden Green services on other websites after you have visited our Site.</li>
+        </ul>
+        <p>These cookies are typically placed by third-party advertising networks and are used to understand your browsing habits to deliver more relevant advertisements. You have the option to manage these cookies through your browser settings or third-party opt-out tools.</p>
+
+        <h3>3.5. Third-Party Cookies</h3>
+        <p>In addition to our own cookies (first-party cookies), we may also use various third-party cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on. Third-party cookies are cookies that are set by a domain other than that of the website you are visiting. This happens when the website incorporates elements from other sites, such as images, social media plugins, or advertising. These third parties may collect information about your browsing activities across different websites and over time.</p>
+        <p>Examples of third-party services that may set cookies include:</p>
+        <ul>
+            <li><strong>Social Media Integrations:</strong> Buttons for sharing content on platforms like Facebook, Twitter, LinkedIn, or Instagram. These platforms may set cookies to track your interaction with their features on our site.</li>
+            <li><strong>Embedded Content:</strong> Videos from YouTube or Vimeo, maps from Google Maps, or other embedded content that may set cookies from their respective domains.</li>
+            <li><strong>Advertising Networks:</strong> As mentioned in the "Targeting and Advertising Cookies" section, these networks use cookies to deliver targeted ads.</li>
+            <li><strong>Analytics Providers:</strong> While we mentioned Google Analytics under performance, it is technically a third-party cookie as it's set by Google.</li>
+        </ul>
+        <p>Grow Garden Green does not control the setting of these third-party cookies, so we suggest you check the third-party websites for more information about their cookies and how to manage them. We strive to partner only with reputable third-party services that adhere to strong privacy standards.</p>
+
+        <h2>4. Your Choices Regarding Cookies</h2>
+        <p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by adjusting your browser settings. Most web browsers allow you to control cookies through their settings preferences. However, if you limit the ability of websites to set cookies, you may worsen your overall user experience, since it will no longer be personalized to you. It may also stop you from saving customized settings like login information.</p>
+        <ul>
+            <li><strong>Browser Settings:</strong> You can typically find these settings in the "options" or "preferences" menu of your browser. Here's how you can manage cookies in common browsers:
+                <ul>
+                    <li><strong>Google Chrome:</strong> Settings > Privacy and security > Site Settings > Cookies and site data.</li>
+                    <li><strong>Mozilla Firefox:</strong> Options > Privacy & Security > Cookies and Site Data.</li>
+                    <li><strong>Microsoft Edge:</strong> Settings > Privacy, search, and services > Tracking prevention / Cookies and site permissions.</li>
+                    <li><strong>Apple Safari:</strong> Preferences > Privacy.</li>
+                </ul>
+                You can choose to delete existing cookies, block all cookies, or allow only certain types of cookies.</li>
+            <li><strong>Opt-out Tools:</strong> For advertising and targeting cookies, you can often opt out of interest-based advertising from participating companies through the Digital Advertising Alliance (<a href="http://www.aboutads.info/choices/" target="_blank">http://www.aboutads.info/choices/</a>) or the Network Advertising Initiative (<a href="http://www.networkadvertising.org/choices/" target="_blank">http://www.networkadvertising.org/choices/</a>).</li>
+            <li><strong>Cookie Consent Banner:</strong> Our website provides a cookie consent banner that allows you to accept or decline cookies when you first visit the site. You can change your preferences at any time by clicking on the "Manage Cookie Preferences" link (or similar) typically found in the footer of our website.</li>
+        </ul>
+        <p>Please remember that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly. Disabling cookies may prevent you from using certain parts of the Site.</p>
+
+        <h2>5. Changes to Our Cookie Policy</h2>
+        <p>We may update our Cookie Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any changes by posting the new Cookie Policy on this page and updating the "Last Updated" date at the top of this policy. We encourage you to review this Cookie Policy periodically for any changes.</p>
+        <p>Significant changes will be communicated through a prominent notice on our website or, where appropriate, by email. Your continued use of our website after any modifications to this Cookie Policy will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Cookie Policy. If you do not agree to the revised policy, you should discontinue using our website.</p>
+        <p>We are committed to maintaining transparency regarding our use of cookies and will ensure that any updates to this policy are clearly communicated and easily accessible. Your understanding and consent are paramount to our operations.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions or concerns about this Cookie Policy or our use of cookies, please do not hesitate to contact us:</p>
+        <ul>
+            <li><strong>By Email:</strong> <a href="mailto:privacy@growgardengreen.com">privacy@growgardengreen.com</a></li>
+            <li><strong>By Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a> (Monday - Saturday, 9:00 AM - 6:00 PM IST)</li>
+            <li><strong>By Mail:</strong><br>
+                Privacy Officer<br>
+                Grow Garden Green Headquarters<br>
+                123 Green Avenue, Garden City,<br>
+                Gurugram, Haryana 122001, India</li>
+        </ul>
+        <p>We are dedicated to addressing your inquiries promptly and thoroughly. Your feedback helps us to continuously improve our privacy practices.</p>
+
+        <h2>7. Detailed Contact-Related Points (Illustrative Examples)</h2>
+        <p>This section provides detailed explanations for common contact points and frequently asked questions related to Grow Garden Green services. We aim to provide comprehensive answers to help you navigate your journey with us seamlessly. Please note that this is an illustrative section, and we encourage you to contact us directly for personalized assistance.</p>
+
+        <div class="contact-points-grid">
+            <div class="contact-point-card">
+                <h4>7.1. How to Request an Initial Consultation?</h4>
+                <p>To begin your garden transformation, the first step is to request an initial consultation. You can do this by filling out the "Book a Free 15-Min Consultation" form on our <a href="contact.html">Contact Us</a> page or the "Get Started" section of our <a href="index.html">Homepage</a>. Please provide your name, email, phone number (optional), and a brief description of your project. Once submitted, our team will review your request and send you a link to our online calendar, where you can select a date and time that works best for you. This initial call helps us understand your vision and assess how Grow Garden Green can best meet your needs. It's a no-obligation discussion designed to set the stage for your dream garden.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.2. What Happens During a Site Visit?</h4>
+                <p>A site visit is a crucial step in our design process. During this visit, a Grow Garden Green design specialist will come to your property to assess the existing conditions. This includes evaluating sunlight exposure, soil type, drainage patterns, topography, and any existing structures or plants. We will also discuss your lifestyle, preferences, and how you envision using your outdoor space in detail. Photographs and measurements will be taken to create an accurate base plan for your design. This comprehensive assessment ensures that our design proposal is perfectly tailored to your property's unique characteristics and your specific requirements. It's an opportunity for us to gather all necessary information to begin crafting your personalized garden sanctuary.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.3. How Long Does the Design Phase Take?</h4>
+                <p>The duration of the design phase can vary depending on the complexity and scale of your project. For smaller gardens or specific feature designs, it might take a few weeks. Larger, more intricate landscapes involving multiple zones or complex hardscaping could extend to several months. Our process typically involves initial concept development, client feedback rounds, revisions, and final blueprint creation. We work diligently to ensure timely progress while maintaining our commitment to quality and attention to detail. A detailed timeline will be provided in your personalized Project Agreement after the initial consultation and site assessment. We prioritize clear communication throughout this phase to keep you informed of every step.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.4. What is Included in a Custom Garden Design?</h4>
+                <p>Our custom garden design service is comprehensive, providing you with a complete blueprint for your dream outdoor space. It typically includes conceptual design sketches, detailed 2D master plans showing layout and dimensions, and often 3D renders or walk-throughs to help you visualize the final outcome. We also provide a tailored plant palette with specific species recommendations suitable for your climate and soil, along with suggestions for hardscape materials (paving, decking), lighting, and water features. The design package will cover all aesthetic and functional aspects discussed during the discovery phase, ensuring a cohesive and personalized plan that can be used for installation. It's a holistic approach to transforming your vision into a actionable plan.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.5. Do You Handle Garden Installation?</h4>
+                <p>Yes, Grow Garden Green offers complete garden installation services. Once your custom garden design is finalized and approved, our skilled installation team can bring your vision to life. This includes all aspects of softscaping (planting trees, shrubs, flowers, and laying turf) and hardscaping (building patios, pathways, decks, retaining walls, and installing water features or outdoor lighting). We manage the entire process, from site preparation and soil enrichment to the final touches, ensuring high-quality craftsmanship and adherence to the design specifications. Our integrated approach ensures a seamless transition from concept to creation, providing you with a single point of contact for your entire garden project. We pride ourselves on efficient and professional execution.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.6. What are Your Sustainable Garden Practices?</h4>
+                <p>Sustainability is at the core of Grow Garden Green's philosophy. Our practices focus on creating eco-friendly sanctuaries that thrive with minimal environmental impact. This includes prioritizing native and drought-tolerant plant species that require less water and support local biodiversity. We implement eco-smart irrigation systems, such as drip irrigation and rainwater harvesting, to conserve water. We also promote soil health through organic amendments and composting, reducing the need for chemical fertilizers. Our designs often incorporate pollinator-friendly plants, permeable surfaces for better water absorption, and materials sourced responsibly. We aim to create gardens that are beautiful, resilient, and contribute positively to the local ecosystem, fostering a healthier planet one garden at a time.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.7. Do You Offer Garden Maintenance Services?</h4>
+                <p>Absolutely. A garden is a living entity that requires ongoing care, and we offer comprehensive maintenance plans to ensure your sanctuary continues to flourish year-round. Our maintenance services can be customized to your garden's specific needs and your preferred frequency (e.g., monthly, quarterly). Services typically include pruning, fertilization, weeding, pest and disease management using eco-friendly methods, irrigation system checks, and seasonal planting updates for continuous color and interest. We also offer seasonal clean-ups and horticultural consulting to keep your garden in optimal health and looking its best, adapting to the changing seasons and ensuring long-term vitality. Our expert team takes the guesswork out of garden care.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.8. How Do You Handle Project Payments?</h4>
+                <p>Our payment terms are clearly outlined in your personalized Project Agreement. Typically, a deposit is required to commence the design phase, followed by phased payments linked to project milestones (e.g., design approval, commencement of installation, completion of major hardscape elements, final planting). This phased approach ensures transparency and aligns payments with tangible progress. We accept various payment methods, including bank transfers and secure online payment gateways (for which details will be provided). All invoices will be detailed and transparent, reflecting the work completed. We are committed to clear financial communication throughout your project, ensuring you understand all costs and payment schedules upfront. Our goal is to make the financial aspect as straightforward as the design process.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.9. Can I See Examples of Your Work?</h4>
+                <p>Yes, we encourage you to explore our extensive portfolio on the <a href="index.html#portfolio">Portfolio</a> section of our website. Our portfolio showcases a diverse range of projects, including modern minimalist gardens, charming cottage retreats, lush tropical oases, and innovative urban green spaces. Each project features high-quality photographs, descriptions of the design philosophy, and often before-and-after sliders to illustrate the transformation. You can filter projects by style to find inspiration that resonates with your vision. We also include client testimonials alongside many projects, offering real-world insights into the satisfaction of our clients. This visual gallery is designed to give you a comprehensive understanding of our capabilities and the quality of our craftsmanship.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.10. What is Your Approach to Client Collaboration?</h4>
+                <p>Client collaboration is at the heart of our design philosophy at Grow Garden Green. We believe that the most successful gardens are born from a deep understanding of our clients' desires and a continuous dialogue throughout the project. From the initial "Inspiration & Discovery" phase, where we actively listen to your ideas and preferences, to the "Concept & Blueprint" stage, where we present designs for your feedback and revisions, your input is invaluable. We use moodboards, 3D renders, and regular communication to ensure that the evolving design aligns perfectly with your vision. Our project managers maintain open lines of communication during installation, keeping you informed of progress and addressing any questions. We see ourselves as partners in creating your dream garden, and your active participation is highly encouraged and valued at every step.</p>
+            </div>
+            <!-- Placeholder for remaining 30 contact points -->
+            <div class="contact-point-card">
+                <h4>7.11. How Do You Select Plants for a Design?</h4>
+                <p>Our plant selection process is highly methodical and tailored to each specific project. We consider a multitude of factors to ensure the long-term health and beauty of your garden. These factors include your aesthetic preferences, the local climate and hardiness zone, soil type and pH, sunlight exposure (full sun, partial shade, deep shade), drainage conditions, and the mature size and growth habits of each plant. We prioritize native and drought-tolerant species where appropriate, promoting biodiversity and reducing water consumption. We also consider seasonal interest, ensuring your garden provides beauty and appeal throughout the year with varying blooms, foliage colors, and textures. Our horticultural experts meticulously curate plant palettes that are not only visually stunning but also resilient and well-suited to your garden's unique environment.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.12. What About Outdoor Lighting?</h4>
+                <p>Outdoor lighting is an integral part of enhancing your garden's beauty and usability, especially after dusk. Grow Garden Green offers comprehensive outdoor lighting design and installation services. Our designs focus on creating ambiance, highlighting key landscape features, improving safety along pathways and steps, and extending the usability of your outdoor living spaces into the evening. We utilize energy-efficient LED lighting solutions that are durable and weather-resistant. Our lighting plans are integrated seamlessly with the overall garden design, considering light temperature, beam spread, and fixture placement to achieve desired effects. Whether you desire subtle accent lighting to illuminate a water feature or functional lighting for an outdoor kitchen, we ensure your garden shines brightly and safely at night.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.13. Do You Offer Warranties on Plants or Work?</h4>
+                <p>Grow Garden Green stands behind the quality of our work and the plants we install. Specific warranties for plants and workmanship will be clearly detailed in your Project Agreement. Generally, we offer a limited warranty on newly installed plants, provided they receive appropriate care as advised by our horticulturalists. This typically covers a period during which we will replace plants that fail to thrive due to issues within our control. Hardscape installations are also covered by a workmanship warranty for a specified period, ensuring structural integrity and proper construction. Our goal is your long-term satisfaction, and we are committed to addressing any issues that may arise post-installation in accordance with our warranty terms. We provide detailed care instructions to help you maintain your new garden's vitality.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.14. How Can I Get an Estimate for My Project?</h4>
+                <p>To receive an estimate for your garden project, we recommend starting with our "Book a Free 15-Min Consultation" service, accessible via our <a href="contact.html">Contact Us</a> page or the "Get Started" section on our <a href="index.html">Homepage</a>. During this initial discussion, we gather preliminary information about your project scope, size, desired style, and budget expectations. Based on this, we can provide you with an estimated range. For a precise and detailed quotation, a site visit and a more in-depth discussion of your specific requirements are necessary. This allows us to accurately assess all variables, including material costs, labor, and specific design complexities, to provide a fixed-price proposal. Our aim is to provide transparent and fair pricing, tailored to your unique garden vision.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.15. What if I Have a Small Space, Like a Balcony?</h4>
+                <p>Grow Garden Green specializes in transforming spaces of all sizes, including small balconies and urban courtyards. We believe that every space, no matter how compact, has the potential to become a vibrant green escape. Our designers are experts in maximizing limited areas through innovative solutions such as vertical gardens, tiered planters, custom built-in seating with integrated planting, and smart space-saving furniture. We focus on creating multi-functional zones that enhance usability and aesthetic appeal. Our approach ensures that even a tiny balcony can become a lush, inviting sanctuary for relaxation, growing edibles, or simply enjoying a touch of nature in the city. Don't let size deter your green dreams; we're here to make them a reality.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.16. Do You Offer Commercial Landscaping Services?</h4>
+                <p>While Grow Garden Green primarily focuses on bespoke residential garden design, we do undertake select commercial landscaping projects that align with our brand essence of creating vibrant, eco-friendly sanctuaries. Our commercial services can include designing inviting outdoor spaces for corporate campuses, residential complexes, hotels, or public parks. We apply the same principles of creative landscape architecture, sustainable planting, and year-round maintenance plans to commercial projects, ensuring they are not only aesthetically pleasing but also functional, durable, and environmentally responsible. If you have a commercial project in mind, please contact us to discuss your specific needs and see if we are a good fit for your vision. We are committed to enhancing urban green spaces with our expertise.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.17. How Do You Ensure Project Timelines Are Met?</h4>
+                <p>Meeting project timelines is a critical aspect of our commitment to client satisfaction. At Grow Garden Green, we implement rigorous project management methodologies. Once a Project Agreement is signed, a detailed timeline with key milestones is established. Our project managers oversee every stage, from procurement of materials to coordination of labor, ensuring efficient progress. Regular communication with the client keeps them informed of developments. While unforeseen circumstances like extreme weather or material delays can occur, we proactively manage these risks, communicate promptly, and work to minimize their impact. Our experienced teams are trained to adhere to schedules while maintaining high standards of quality, ensuring your garden transformation is completed as efficiently as possible.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.18. Can I Provide My Own Plants or Materials?</h4>
+                <p>We typically prefer to source all plants and materials for our projects to ensure quality, consistency, and adherence to our sustainable practices. Our established relationships with trusted nurseries and suppliers allow us to procure high-quality specimens and materials at competitive prices, and we can guarantee their suitability for the design. However, we understand that clients may have specific plants they wish to retain or sentimental items they want to incorporate. Any client-supplied materials or plants must be discussed and approved during the design phase and will be integrated into the Project Agreement. Please note that warranties may not apply to client-supplied items, and their integration might impact the overall project timeline or cost. Open communication about this is key.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.19. What is Your Approach to Water Conservation?</h4>
+                <p>Water conservation is a cornerstone of our sustainable garden design philosophy. We employ a multi-faceted approach to minimize water usage in your garden. This includes selecting drought-tolerant and native plant species that are naturally adapted to the local climate and require less supplemental irrigation. We design and install highly efficient irrigation systems, such as drip irrigation, which delivers water directly to the plant roots, reducing evaporation and runoff. We also recommend and install smart irrigation controllers that adjust watering schedules based on real-time weather data. Additionally, we promote the use of organic mulches to retain soil moisture and improve soil health, further reducing the need for excessive watering. Our goal is to create beautiful gardens that are also environmentally responsible and water-wise.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.20. Do You Offer Seasonal Garden Refreshes?</h4>
+                <p>Yes, as part of our ongoing care and maintenance plans, we offer seasonal garden refreshes. Gardens are dynamic, ever-changing spaces, and a seasonal refresh ensures your outdoor sanctuary remains vibrant and visually appealing throughout the year. This service typically involves updating seasonal plantings with new flowers or foliage that are in peak bloom or color for the current season, pruning to maintain shape and encourage new growth, and making minor adjustments to decor or arrangements. It's an opportunity to introduce new textures, colors, and focal points that reflect the time of year, keeping your garden dynamic and engaging. This service helps to maintain the "glow" of your garden long after the initial installation.</p>
+            </div>
+            <!-- Continue adding more contact points here following the same structure -->
+            <div class="contact-point-card">
+                <h4>7.21. How Do You Handle Unexpected Site Conditions?</h4>
+                <p>During the initial site visit, our team conducts a thorough assessment, but sometimes unexpected conditions (e.g., hidden pipes, unstable soil, unforeseen rock formations) can arise during the installation phase. In such cases, our project manager will immediately communicate with you to explain the situation, its potential impact on the timeline and budget, and propose viable solutions. We prioritize transparency and collaboration in addressing these challenges. Our experienced team is adept at problem-solving and finding efficient, cost-effective solutions while adhering to the original design intent as much as possible. Any significant changes will be documented and approved through a formal change order process, ensuring you are fully informed and in agreement before proceeding. Our goal is to minimize disruption and keep your project on track.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.22. What is Your Philosophy on Hardscaping?</h4>
+                <p>Our philosophy on hardscaping is that it forms the essential "bones" of your garden, providing structure, functionality, and defining spaces. We view hardscapes—such as patios, pathways, retaining walls, and decking—not just as functional elements but as integral parts of the overall aesthetic. We carefully select materials that complement your home's architecture, withstand local climate conditions, and align with your desired garden style. We prioritize durable, high-quality materials and expert craftsmanship to ensure longevity and safety. Our designs seamlessly integrate hardscapes with softscapes, creating harmonious transitions between built elements and natural planting. Whether it's a cozy stone patio for entertaining or a winding gravel path through a perennial border, hardscaping is thoughtfully designed to enhance both the beauty and usability of your outdoor living area.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.23. Do You Offer Virtual Garden Design Services?</h4>
+                <p>Yes, Grow Garden Green offers virtual garden design services, making our expertise accessible regardless of your location. This service is ideal for clients who are not local to our headquarters or prefer the convenience of remote consultations. The process typically involves initial video consultations, where you provide photographs, videos, and measurements of your outdoor space. We might also utilize satellite imagery and online tools for site analysis. Design proposals, 2D blueprints, and 3D renders are then shared digitally for your review and feedback. While some aspects like detailed soil testing might require local input from you, our virtual service provides a comprehensive design plan that you can then implement yourself or with local contractors. This flexible approach allows us to bring our unique design philosophy to a wider audience, transforming spaces remotely with the same dedication to detail and sustainability.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.24. How Can I Ensure My Garden Stays Healthy After Installation?</h4>
+                <p>Ensuring your garden's long-term health after installation is a shared responsibility. Grow Garden Green provides comprehensive care instructions tailored to your specific plant palette and garden features. These instructions cover watering schedules, fertilization needs, pruning techniques, and common pest/disease indicators. We strongly recommend opting for one of our ongoing maintenance plans, as our expert horticulturalists can provide consistent, professional care, addressing issues proactively and adapting to seasonal changes. Regular maintenance ensures optimal plant health, prevents common problems, and keeps your garden looking its best. Even with our guidance, consistent attention from the homeowner is crucial. We are always available for follow-up consultations or troubleshooting if you encounter any challenges with your new garden.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.25. What is Your Policy on Design Revisions?</h4>
+                <p>Our design process is collaborative and includes opportunities for revisions to ensure your complete satisfaction. The number and scope of revisions included in the initial design fee will be clearly outlined in your Project Agreement. Typically, our design phase incorporates a set number of revision rounds (e.g., one major revision and two minor adjustments) after the initial concept presentation. This allows us to refine the design based on your feedback. Any requests for revisions beyond the agreed-upon scope or after the design has been finalized may incur additional charges, which will be communicated and approved by you beforehand. Our goal is to achieve your dream garden, and we work closely with you to ensure the design perfectly matches your vision before moving to installation.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.26. Do You Offer Consultations for Existing Gardens?</h4>
+                <p>Yes, Grow Garden Green provides expert consultations specifically for existing gardens. If you have an established garden that needs a refresh, problem-solving, or a new direction, our horticulturalists and designers can offer valuable insights. This service can cover various aspects such as plant health assessment, identifying pest or disease issues, recommending suitable new plantings, advising on pruning and maintenance strategies, or suggesting ways to enhance specific areas of your garden. It's a great option if you're not looking for a full redesign but need professional guidance to improve your current landscape. These consultations can be booked through our contact channels and are tailored to your specific needs and concerns about your existing green space.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.27. How Do You Incorporate Water Features?</h4>
+                <p>Water features add tranquility, visual interest, and a soothing auditory element to any garden. Grow Garden Green designs and installs a variety of water features, from serene ponds and bubbling fountains to cascading waterfalls and elegant bird baths. Our approach considers the scale of your garden, desired aesthetic, and maintenance preferences. We focus on integrating water features seamlessly into the landscape, using natural materials and efficient pumping systems. We also advise on water conservation for these features, such as proper filtration and minimizing evaporation. Whether you envision a minimalist reflection pool or a vibrant koi pond, our designs ensure the water feature enhances the overall harmony and sensory experience of your sanctuary, creating a focal point that captivates and calms.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.28. What is the Process for Material Selection?</h4>
+                <p>Material selection is a collaborative and carefully considered part of our design process. Once the conceptual design is established, we present you with a curated selection of materials for hardscapes (paving, decking, walls), decorative elements, and any other structural components. We consider factors such as durability, aesthetic appeal, maintenance requirements, sustainability, and budget. We often provide samples or direct you to showrooms where you can see and feel the materials firsthand. Our designers guide you through the pros and cons of different options, ensuring that your choices align with the overall garden style and your practical needs. This meticulous selection process ensures that every element of your garden is of high quality and contributes to the desired aesthetic and functionality.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.29. Can You Help with Outdoor Kitchens and Entertainment Areas?</h4>
+                <p>Absolutely. Extending your living space outdoors with functional and beautiful outdoor kitchens and entertainment areas is one of our specialties. We design and install custom outdoor kitchens complete with grilling stations, sinks, refrigeration, and storage, tailored to your culinary needs and entertaining style. We also create inviting lounge areas with comfortable seating, fire pits, outdoor fireplaces, and integrated lighting and sound systems. Our designs focus on creating seamless transitions between indoor and outdoor spaces, ensuring functionality, comfort, and aesthetic harmony. We consider factors like sun exposure, wind patterns, and proximity to your home to create an ideal outdoor living environment perfect for gatherings, relaxation, and enjoying the natural beauty of your garden.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.30. What Measures Do You Take for Pest and Disease Management?</h4>
+                <p>At Grow Garden Green, our approach to pest and disease management is primarily preventative and eco-friendly. We focus on creating a healthy garden ecosystem that naturally resists pests and diseases. This includes selecting resilient plant species, ensuring proper soil health, and maintaining optimal watering and fertilization regimes. When issues arise, we first employ integrated pest management (IPM) strategies, which prioritize non-chemical methods such as manual removal, introducing beneficial insects, or using organic horticultural oils and soaps. Chemical interventions are considered only as a last resort and are always applied with the utmost care and environmental consideration. Our maintenance plans include regular monitoring to detect problems early, allowing for timely and effective interventions that protect your garden's health and the surrounding environment.</p>
+            </div>
+            <!-- Add 10 more points here following the same structure (7.31 to 7.40) -->
+            <div class="contact-point-card">
+                <h4>7.31. How Do You Ensure Privacy in Garden Design?</h4>
+                <p>Privacy is a key consideration for many clients, and we incorporate various design techniques to create secluded and intimate spaces within your garden. This includes strategic planting of dense shrubs, trees, or climbing vines on trellises to create living screens. We also utilize hardscape elements such as elegant privacy screens, garden walls, pergolas with climbing plants, or decorative fences. The placement of seating areas and focal points is carefully planned to enhance a sense of enclosure and retreat. Our designs aim to create a serene sanctuary where you can relax and enjoy your outdoor space without feeling exposed, blending natural and structural elements to achieve the desired level of seclusion while maintaining aesthetic appeal and light flow.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.32. Can You Integrate Existing Garden Features?</h4>
+                <p>Yes, we often integrate existing garden features into our new designs. This could include mature trees, beloved sculptures, existing patios, or sentimental plants. During the initial site visit and consultation, we assess these elements for their health, structural integrity, and aesthetic potential. We then work to seamlessly incorporate them into the new design, ensuring they enhance rather than detract from the overall vision. Sometimes, an existing feature might become a central focal point, while others might be subtly integrated or given a new purpose. Our goal is to honor the history and character of your space while introducing fresh, innovative elements to create a cohesive and harmonious landscape that feels both new and familiar.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.33. What is the Role of Soil Health in Your Designs?</h4>
+                <p>Soil health is fundamental to the success and sustainability of any garden, and it's a primary focus in our design and installation process. We conduct thorough soil analysis during the site visit to understand its composition, pH levels, and nutrient deficiencies. Based on this analysis, we implement tailored soil enrichment programs, which may include adding organic matter (compost), beneficial microbes, or specific amendments to improve drainage, aeration, and nutrient availability. Healthy soil provides a strong foundation for plant growth, enhances water retention, and reduces the need for chemical fertilizers and pesticides. Our commitment to nurturing the soil ensures that your plants thrive naturally, leading to a more resilient, vibrant, and eco-friendly garden that requires less intervention over time.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.34. Do You Offer Designs for Specific Garden Styles?</h4>
+                <p>Yes, Grow Garden Green specializes in a wide array of garden styles to match diverse client preferences and architectural contexts. Our expertise spans from the clean lines and minimalist aesthetics of Modern Minimal gardens to the lush, informal beauty of Cottage Charm. We also design vibrant Tropical Oases, efficient Urban Green spaces, elegant Formal/Estate gardens, and water-wise Xeriscape landscapes. During our "Your Garden Personality" quiz and initial consultations, we delve deep into your stylistic preferences, drawing inspiration from various horticultural traditions and contemporary trends. Our designers are adept at translating your vision into a cohesive and authentic design, ensuring that the chosen style perfectly complements your home and lifestyle. We can also blend styles or create entirely unique concepts based on your specific desires.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.35. How Do You Manage Project Waste and Debris?</h4>
+                <p>Responsible waste management is an integral part of our commitment to sustainability. During the installation phase, we meticulously sort and manage all project waste and debris. Organic materials such as excavated soil, plant trimmings, and green waste are composted or recycled whenever possible, often used to enrich other garden beds or sent to local composting facilities. Construction debris like concrete, wood, and metal are separated for recycling. We minimize landfill contributions by prioritizing sustainable material sourcing and efficient planning to reduce excess. Our teams are trained in proper waste segregation and disposal protocols, ensuring that our operations have the least possible environmental impact. We strive to leave your property clean and tidy, with minimal ecological footprint from the construction process.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.36. Can I Get Advice on Specific Plant Care?</h4>
+                <p>Yes, as part of our commitment to your garden's long-term success, Grow Garden Green offers expert advice on specific plant care. For clients with maintenance plans, our horticulturalists provide ongoing guidance and address any plant health concerns during their visits. For other clients, we offer dedicated plant care consultations where you can get tailored advice on watering, feeding, pruning, and troubleshooting issues for particular plant species in your garden. This service is invaluable for ensuring your plants thrive and reach their full potential. We can help you understand the unique needs of your plants, diagnose problems, and implement effective solutions to keep your green companions healthy and vibrant. Contact us to schedule a plant care consultation.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.37. What is Your Approach to Garden Drainage?</h4>
+                <p>Effective garden drainage is crucial for plant health and preventing water damage to your property. Grow Garden Green incorporates comprehensive drainage solutions into our designs. During the site assessment, we analyze existing drainage patterns and identify any areas prone to waterlogging. Our solutions may include improving soil permeability, installing French drains, creating swales or rain gardens to manage stormwater runoff, or designing permeable hardscapes (like gravel paths or permeable pavers) that allow water to infiltrate the ground naturally. Proper grading and contouring of the landscape also play a vital role in directing water away from structures and ensuring optimal moisture levels for plants. Our aim is to create a resilient garden ecosystem that manages water efficiently, preventing both drought stress and waterlogging.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.38. Do You Offer Landscape Renovation Services?</h4>
+                <p>Yes, Grow Garden Green provides comprehensive landscape renovation services for existing gardens that need a complete overhaul or significant refresh. This is distinct from a full redesign of a new space. Renovation projects often involve removing outdated or overgrown plantings, repairing or upgrading hardscapes, improving drainage, enhancing soil health, and introducing new design elements to revitalize the entire landscape. We work with you to understand what you want to retain and what needs to be transformed, creating a plan that breathes new life into your outdoor space while respecting its history. Our renovation services aim to update aesthetics, improve functionality, and enhance sustainability, giving your mature garden a fresh, modern, and vibrant appeal.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.39. How Do You Ensure Plant Sourcing Quality?</h4>
+                <p>Ensuring the quality of plants is paramount to the success of your garden. Grow Garden Green has established strong relationships with reputable local and regional nurseries that adhere to high horticultural standards. We meticulously vet our suppliers to ensure they provide healthy, robust, and disease-free plant material. Our team personally inspects plants before procurement to confirm their quality, size, and species accuracy. We prioritize plants grown using sustainable practices, minimizing the use of pesticides and promoting healthy root systems. This rigorous sourcing process, combined with careful transportation and proper planting techniques, ensures that your garden receives the best possible start, leading to thriving and beautiful landscapes for years to come. We believe that a great garden begins with great plants.</p>
+            </div>
+            <div class="contact-point-card">
+                <h4>7.40. What is Your Approach to Customer Feedback?</h4>
+                <p>At Grow Garden Green, customer feedback is highly valued and integral to our continuous improvement process. We actively solicit feedback at various stages of a project, from initial consultations to post-completion surveys. We encourage open and honest communication, welcoming both positive comments and constructive criticism. All feedback is reviewed by our management team and used to refine our services, enhance our processes, and improve client satisfaction. We believe that listening to our clients is key to building lasting relationships and ensuring that we consistently deliver exceptional results. If you have any feedback, please do not hesitate to share it through our contact channels or directly with your project manager. Your insights help us grow and serve you better.</p>
+            </div>
+        </div>
+        <p style="margin-top: 40px; font-size: 1.1em; text-align: center;">For any further questions or to discuss a specific point in more detail, please do not hesitate to <a href="contact.html">contact us</a> directly. We are here to help!</p>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Grow Garden Green</h3>
+                <p>Transforming outdoor spaces into vibrant, eco-friendly sanctuaries with creative landscape architecture, sustainable planting, and year-round maintenance.</p>
+                <div class="social-links" style="margin-top: 20px;">
+                    <a href="https://facebook.com/growgardengreen" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/growgardengreen" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com/growgardengreen" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://linkedin.com/company/growgardengreen" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#our-process">Our Process</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#inspiration-blog">Blog</a></li>
+                    <li><a href="index.html#get-started">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="index.html#disclaimer">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong><br>
+                Grow Garden Green Headquarters<br>
+                123 Green Avenue, Garden City,<br>
+                Gurugram, Haryana 122001, India</p>
+                <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@growgardengreen.com">info@growgardengreen.com</a></p>
+                <p><strong>Business Hours:</strong><br>
+                Mon - Sat: 9:00 AM - 6:00 PM IST</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Grow Garden Green. All rights reserved. Crafting lush sanctuaries, one garden at a time. Designed with passion, built for nature.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <p>This website uses cookies to ensure you get the best experience on our website. By clicking "Accept All Cookies", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. For more details, please read our <a href="cookies.html">Cookie Policy</a>.</p>
+        <div class="cookie-consent-buttons">
+            <button id="acceptCookies">Accept All Cookies</button>
+            <button id="declineCookies" class="decline">Decline</button>
+        </div>
+    </div>
+
+    <!-- Font Awesome for social icons. You can replace with your own icons or remove if not needed. -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cookieBanner = document.getElementById('cookieConsentBanner');
+            const acceptButton = document.getElementById('acceptCookies');
+            const declineButton = document.getElementById('declineCookies');
+
+            // Function to set a cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+            }
+
+            // Function to get a cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for(let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Check if cookie consent has been given
+            const consentGiven = getCookie('grow_garden_green_cookie_consent');
+
+            if (!consentGiven) {
+                // Show banner after a short delay to ensure page loads
+                setTimeout(() => {
+                    cookieBanner.classList.add('show');
+                }, 1000);
+            }
+
+            acceptButton.addEventListener('click', () => {
+                setCookie('grow_garden_green_cookie_consent', 'accepted', 365); // Consent for 1 year
+                cookieBanner.classList.remove('show');
+            });
+
+            declineButton.addEventListener('click', () => {
+                setCookie('grow_garden_green_cookie_consent', 'declined', 30); // Decline for 30 days
+                // You might also want to disable non-essential cookies here if you have a more advanced setup
+                cookieBanner.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
